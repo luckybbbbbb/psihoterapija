@@ -605,7 +605,7 @@ function App() {
       <footer className="bg-gray-900 text-white py-12">
         <div className=" text-center text-gray-400">
           <p>
-            &copy; 2025 Suzana Mojsilović - Gestalt Psihoterapija.
+            &copy; {data.copyright.copyright}
           </p>
         </div>
       </footer>
