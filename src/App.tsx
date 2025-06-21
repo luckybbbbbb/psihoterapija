@@ -4,16 +4,52 @@ import {
   X,
   Phone,
   Mail,
-  MapPin,
   Clock,
-  ChevronRight,
+  ArrowUp,
 } from "lucide-react";
+import { latinicaData } from "./data/latinica";
+import { cirilicaData } from "./data/cirilica";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [language, setLanguage] = React.useState<'cirilica' | 'latinica'>('cirilica');
+  const [showScrollTop, setShowScrollTop] = React.useState(false);
+  
+  const data = language === 'cirilica' ? cirilicaData : latinicaData;
+
+  // Handle scroll to show/hide scroll to top button
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div className="min-h-screen bg-white">
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-700 transition-all duration-300 z-50 hover:scale-110"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp size={24} />
+        </button>
+      )}
+
       {/* Navigation */}
       <nav className="bg-white shadow-sm fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,42 +66,77 @@ function App() {
                 href="#home"
                 className="text-gray-700 hover:text-teal-600 transition-colors"
               >
-                Početna
+                {data.navigation.home}
               </a>
               <a
                 href="#about"
                 className="text-gray-700 hover:text-teal-600 transition-colors"
               >
-                O meni
+                {data.navigation.about}
               </a>
               <a
                 href="#gestalt"
                 className="text-gray-700 hover:text-teal-600 transition-colors"
               >
-                Gestalt
+                {data.navigation.gestalt}
               </a>
               <a
-                href="#services"
+                href="#schema"
                 className="text-gray-700 hover:text-teal-600 transition-colors"
               >
-                Usluge
+                {data.navigation.schema}
               </a>
               <a
                 href="#contact"
                 className="text-gray-700 hover:text-teal-600 transition-colors"
               >
-                Kontakt
+                {data.navigation.contact}
               </a>
+              
+              {/* Language switcher */}
+              <div className="flex items-center space-x-2">
+                <img 
+                  src="https://flagcdn.com/w20/rs.png" 
+                  alt="Serbian flag" 
+                  className="w-5 h-3"
+                />
+                <select
+                  value={language}
+                  onChange={(e) => setLanguage(e.target.value as 'cirilica' | 'latinica')}
+                  className="text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:border-teal-500"
+                >
+                  <option value="cirilica">Ћирилица</option>
+                  <option value="latinica">Latinica</option>
+                </select>
+              </div>
+              
               <a
                 href="#contact"
                 className="bg-teal-600 text-white px-6 py-2 rounded-full hover:bg-teal-700 transition-colors inline-block"
               >
-                Zakaži termin
+                {data.navigation.bookAppointment}
               </a>
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center space-x-4">
+              {/* Language switcher for mobile */}
+              <div className="flex items-center space-x-2">
+                <img 
+                  src="https://flagcdn.com/w20/rs.png" 
+                  alt="Serbian flag" 
+                  className="w-4 h-3"
+                />
+                <select
+                  value={language}
+                  onChange={(e) => setLanguage(e.target.value as 'cirilica' | 'latinica')}
+                  className="text-xs border border-gray-300 rounded px-1 py-1 focus:outline-none focus:border-teal-500"
+                >
+                  <option value="cirilica">Ћирилица</option>
+                  <option value="latinica">Latinica</option>
+                </select>
+              </div>
+              
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-700"
@@ -81,22 +152,22 @@ function App() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <a href="#home" className="block px-3 py-2 text-gray-700">
-                Početna
+                {data.navigation.home}
               </a>
               <a href="#about" className="block px-3 py-2 text-gray-700">
-                O meni
+                {data.navigation.about}
               </a>
               <a href="#gestalt" className="block px-3 py-2 text-gray-700">
-                Gestalt
+                {data.navigation.gestalt}
               </a>
-              <a href="#services" className="block px-3 py-2 text-gray-700">
-                Usluge
+              <a href="#schema" className="block px-3 py-2 text-gray-700">
+                {data.navigation.schema}
               </a>
               <a href="#contact" className="block px-3 py-2 text-gray-700">
-                Kontakt
+                {data.navigation.contact}
               </a>
               <button className="w-full mt-4 bg-teal-600 text-white px-6 py-2 rounded-full">
-                Zakaži termin
+                {data.navigation.bookAppointment}
               </button>
             </div>
           </div>
@@ -115,16 +186,20 @@ function App() {
             <div className="max-w-7xl mx-auto px-4 h-full flex items-center">
               <div className="text-white max-w-2xl">
                 <h1 className="text-5xl font-serif mb-6">
-                  Gestalt psihoterapija u Novom Pazaru
+                  {data.hero.title}
                 </h1>
                 <p className="text-xl mb-8">
-                  Otkrijte put ka svesnijem i ispunjenijem životu kroz Gestalt
-                  pristup — terapija koja vas osnažuje da budete autentično
-                  prisutni i u kontaktu sa sobom i drugima.
+                  {data.hero.description}
                 </p>
-                <button className="bg-teal-600 text-white px-8 py-3 rounded-full text-lg hover:bg-teal-700 transition-colors">
-                  Započnite vaše putovanje
-                </button>
+                <p className="text-lg mb-8">
+                  {data.hero.additionalText}
+                </p>
+                <p className="text-lg mb-8">
+                  {data.hero.approach}
+                </p>
+                <p className="text-lg mb-8">
+                  {data.hero.schemaInfo}
+                </p>
               </div>
             </div>
           </div>
@@ -135,43 +210,129 @@ function App() {
       <section id="about" className="py-20 bg-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative w-full h-full overflow-hidden rounded-lg shadow-lg">
+            <div className="relative h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
               <img
                 src="/src/photos/psihoterapeut.jpg"
                 alt="Suzana Mojsilović - psihoterapeut"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-contain bg-gray-100"
               />
             </div>
             <div>
               <h2 className="text-3xl font-serif text-gray-900 mb-4">
-                Suzana Mojsilović
+                {data.about.title}
               </h2>
-              <h3 className="text-lg text-teal-600 mb-6">
-                Diplomirani psiholog i licencirani psihoterapeut
+              <h3 className="text-xl font-serif text-gray-900 mb-4">
+                {data.about.name}
               </h3>
               <p className="text-gray-600 mb-4">
-                Suzana ima više od 15 godina iskustva u radu sa pojedincima,
-                parovima i porodicama. Njena praksa je fokusirana na pružanje
-                podrške kroz sve životne izazove, uz korišćenje savremenih
-                terapijskih pristupa.
+                {data.about.education}
+              </p>
+              <p className="text-gray-600 mb-4">
+                {data.about.gestaltLicense}
+                {language === 'cirilica' && (
+                  <a 
+                    href="https://www.gestaltstudio.org.rs/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-teal-600 hover:text-teal-700 underline ml-1"
+                  >
+                    (https://www.gestaltstudio.org.rs/)
+                  </a>
+                )}
+                {language === 'latinica' && (
+                  <a 
+                    href="https://www.gestaltstudio.org.rs/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-teal-600 hover:text-teal-700 underline ml-1"
+                  >
+                    (https://www.gestaltstudio.org.rs/)
+                  </a>
+                )}
+              </p>
+              <p className="text-gray-600 mb-4">
+                {data.about.schemaEducation}
+                {language === 'cirilica' && (
+                  <a 
+                    href="https://schematherapybelgrade.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-teal-600 hover:text-teal-700 underline ml-1"
+                  >
+                    (https://schematherapybelgrade.com/)
+                  </a>
+                )}
+                {language === 'latinica' && (
+                  <a 
+                    href="https://schematherapybelgrade.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-teal-600 hover:text-teal-700 underline ml-1"
+                  >
+                    (https://schematherapybelgrade.com/)
+                  </a>
+                )}
+              </p>
+              <p className="text-gray-600 mb-4">
+                {data.about.memberships}
+                {language === 'cirilica' && (
+                  <>
+                    <br />
+                    <a 
+                      href="https://savezpsihoterapeuta.org/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-teal-600 hover:text-teal-700 underline"
+                    >
+                      https://savezpsihoterapeuta.org/
+                    </a>
+                    <br />
+                    <a 
+                      href="https://sugp.rs/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-teal-600 hover:text-teal-700 underline"
+                    >
+                      https://sugp.rs/
+                    </a>
+                  </>
+                )}
+                {language === 'latinica' && (
+                  <>
+                    <br />
+                    <a 
+                      href="https://savezpsihoterapeuta.org/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-teal-600 hover:text-teal-700 underline"
+                    >
+                      https://savezpsihoterapeuta.org/
+                    </a>
+                    <br />
+                    <a 
+                      href="https://sugp.rs/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-teal-600 hover:text-teal-700 underline"
+                    >
+                      https://sugp.rs/
+                    </a>
+                  </>
+                )}
               </p>
               <p className="text-gray-600 mb-6">
-                Empatija, posvećenost i diskretnost su osnovni principi njenog
-                rada. Suzana veruje da svaka osoba ima kapacitet za promenu i
-                isceljenje uz odgovarajuću podršku.
+                {data.about.workApproach}
               </p>
-              <button className="flex items-center text-teal-600 hover:text-teal-700 transition-colors">
-                <a href="#licenses" className="flex items-center">
-                  Saznaj više <ChevronRight className="ml-2" size={20} />
-                </a>
-              </button>
+              <p className="text-gray-600 mb-6">
+                {data.about.therapeuticRelationship}
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Licenses Section */}
-      <section id="licenses" className="py-20 bg-white">
+      {/* <section id="licenses" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
             Profesionalne licence i kvalifikacije
@@ -269,142 +430,117 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* What is Gestalt */}
       <section id="gestalt" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
-            Šta je Gestalt psihoterapija?
+            {data.gestalt.title}
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-teal-100 hover:border-teal-200 transition-colors">
               <p className="text-gray-600 mb-4">
-                Gestalt psihoterapija je holistički pristup koji podstiče
-                svesnost o sadašnjem trenutku i direktno iskustvo "ovde i sada".
-                Ovaj pristup naglašava važnost integrisanja različitih aspekata
-                sebe kako bismo funkcionisali kao celina.
+                {data.gestalt.description}
               </p>
               <p className="text-gray-600 mb-4">
-                Centralne ideje Gestalt pristupa uključuju:
+                {data.gestalt.approach}
               </p>
-              <ul className="list-disc pl-5 text-gray-600 mb-4 space-y-2">
-                <li>Svesnost o trenutku i doživljaju ("awareness")</li>
-                <li>Kontakt sa sobom i okolinom</li>
-                <li>Preuzimanje odgovornosti za sopstvene izbore</li>
-                <li>Kreativno prilagođavanje novim situacijama</li>
-                <li>Integracija polariteta i nedovršenih iskustava</li>
-              </ul>
               <p className="text-gray-600">
-                Kroz dijalog, eksperimente i kreativne tehnike, Gestalt terapija
-                vam pomaže da osvestite obrasce ponašanja, misli i osećanja, kao
-                i da pronađete nove, zdravije načine za suočavanje sa životnim
-                izazovima.
+                {data.gestalt.benefits}
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-teal-100 hover:border-teal-200 transition-colors">
               <h3 className="text-xl font-serif text-gray-900 mb-4">
-                Kada može pomoći Gestalt pristup?
+                {data.therapy.title}
               </h3>
               <p className="text-gray-600 mb-4">
-                Gestalt terapija je posebno efikasna kod:
+                {data.therapy.description}
               </p>
-              <ul className="list-disc pl-5 text-gray-600 mb-4 space-y-2">
-                <li>Anksioznosti i depresije</li>
-                <li>Poteškoća u odnosima</li>
-                <li>Nedostatka samopouzdanja i samoprihvatanja</li>
-                <li>Osećaja praznine i besmisla</li>
-                <li>Traume i gubitka</li>
-                <li>Potrebe za ličnim rastom i samospoznajom</li>
-                <li>Problema sa komunikacijom</li>
-                <li>Profesionalnih izazova i pregorenja</li>
-              </ul>
+              <p className="text-gray-600 mb-4">
+                {data.therapy.sessions}
+              </p>
               <p className="text-gray-600">
-                Kroz naš zajednički rad, pomoći ću vam da osvrnete na životne
-                obrasce koji vas ograničavaju i da razvijete nove, autentičnije
-                i ispunjenije načine postojanja u svetu.
+                {data.therapy.approach}
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section id="services" className="py-20 bg-gray-50">
+      {/* Schema Therapy */}
+      <section id="schema" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
-            Moje usluge
+            {data.schema.title}
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Individualna Gestalt terapija",
-                description:
-                  "Personalizovane sesije fokusirane na povećanje svesnosti, integraciju polariteta i razvoj autentičnog života u sadašnjosti.",
-              },
-              {
-                title: "Psihoterapija parova",
-                description:
-                  "Poboljšanje komunikacije i povezanosti kroz povećanje svesnosti o dinamici odnosa i unapređenje kontakta među partnerima.",
-              },
-              {
-                title: "Online terapija",
-                description:
-                  "Gestalt pristup prilagođen virtuelnom okruženju, dostupan odakle god se nalazite, sa istim principima i benefitima.",
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              >
-                <h3 className="text-xl font-serif text-gray-900 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <button className="text-teal-600 hover:text-teal-700 transition-colors flex items-center">
-                  Saznaj više <ChevronRight className="ml-2" size={20} />
-                </button>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <p className="text-gray-600 mb-6">
+                {data.schema.description}
+              </p>
+              <h3 className="text-xl font-serif text-gray-900 mb-4">
+                Šta su maladaptivne šeme?
+              </h3>
+              <p className="text-gray-600">
+                {data.schema.maladaptiveSchemas}
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-xl shadow-lg">
+              <h3 className="text-xl font-serif text-gray-900 mb-4">
+                Ciljevi šema terapije
+              </h3>
+              <p className="text-gray-600">
+                {data.schema.goals}
+              </p>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 bg-white p-8 rounded-lg shadow-md">
-            <h3 className="text-2xl font-serif text-gray-900 mb-6">
-              O sesijama
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-lg font-medium text-gray-900 mb-3">
-                  Kako izgleda sesija?
-                </h4>
-                <p className="text-gray-600 mb-4">
-                  Individualne sesije traju 50 minuta i održavaju se u sigurnom,
-                  poverljivom okruženju. Prva sesija je fokusirana na
-                  upoznavanje i definisanje ciljeva terapije, dok naredne sesije
-                  prate vaše potrebe i teme koje želite da istražite.
-                </p>
-                <p className="text-gray-600">
-                  U Gestalt pristupu, terapeut je aktivan saradnik koji vas
-                  podržava u istraživanju i prati vaš jedinstveni proces, bez
-                  nametanja rešenja ili saveta.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-medium text-gray-900 mb-3">
-                  Trajanje terapije
-                </h4>
-                <p className="text-gray-600 mb-4">
-                  Dužina psihoterapijskog procesa zavisi od vaših potreba i
-                  ciljeva. Neki klijenti pronalaze vrednost u kratkoročnom radu
-                  (5-10 sesija), dok drugi biraju duži proces za dublje,
-                  strukturalne promene.
-                </p>
-                <p className="text-gray-600">
-                  Za optimalnu efikasnost, sesije se najčešće održavaju jednom
-                  nedeljno, posebno u početnoj fazi, a kasnije je moguće
-                  prilagoditi dinamiku prema vašem napretku i potrebama.
-                </p>
-              </div>
+      {/* For Whom */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
+            {data.forWhom.title}
+          </h2>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-gray-600 mb-6 text-lg">
+              {data.forWhom.description}
+            </p>
+            <p className="text-gray-600 text-lg">
+              {data.forWhom.conclusion}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 bg-teal-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
+            {data.faq.title}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <p className="text-gray-600 font-medium mb-2">
+                {data.faq.sessionDuration}
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <p className="text-gray-600 font-medium mb-2">
+                {data.faq.sessionFrequency}
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <p className="text-gray-600 font-medium mb-2">
+                {data.faq.confidentiality}
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <p className="text-gray-600 font-medium mb-2">
+                {data.faq.bigProblem}
+              </p>
             </div>
           </div>
         </div>
@@ -414,7 +550,7 @@ function App() {
       <section id="contact" className="py-20 bg-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
-            Kontaktirajte me
+            {data.contact.title}
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -423,64 +559,25 @@ function App() {
                   <Phone className="text-teal-600 mr-4" size={24} />
                   <div>
                     <h3 className="text-lg font-medium text-gray-900">
-                      Telefon
+                      {data.contact.phone}
                     </h3>
-                    <p className="text-gray-600">+381 XX XXX XXX</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Mail className="text-teal-600 mr-4" size={24} />
                   <div>
-                    <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                    <p className="text-gray-600">
-                      kontakt@gestaltnovipazar.com
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="text-teal-600 mr-4" size={24} />
-                  <div>
                     <h3 className="text-lg font-medium text-gray-900">
-                      Lokacija
+                      {data.contact.email}
                     </h3>
-                    <p className="text-gray-600">
-                      Ulica Prvomajska XX
-                      <br />
-                      Novi Pazar, Srbija
-                    </p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Clock className="text-teal-600 mr-4" size={24} />
                   <div>
                     <h3 className="text-lg font-medium text-gray-900">
-                      Radno vreme
+                      {data.contact.workType}
                     </h3>
-                    <p className="text-gray-600">
-                      Ponedeljak - Petak: 9h - 19h
-                      <br />
-                      Subota: 10h - 14h (po dogovoru)
-                    </p>
                   </div>
-                </div>
-              </div>
-              <div className="mt-8">
-                <h3 className="text-lg font-medium text-gray-900 mb-4">
-                  Društvene mreže
-                </h3>
-                <div className="flex space-x-4">
-                  <a
-                    href="#"
-                    className="text-teal-600 hover:text-teal-700 transition-colors"
-                  >
-                    Instagram
-                  </a>
-                  <a
-                    href="#"
-                    className="text-teal-600 hover:text-teal-700 transition-colors"
-                  >
-                    Facebook
-                  </a>
                 </div>
               </div>
             </div>
@@ -551,71 +648,11 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between">
-            {/* Leva strana */}
-            <div className="mb-8 md:mb-0">
-              <h3 className="text-xl font-serif mb-4">Gestalt Psihoterapija</h3>
-              <p className="text-gray-400 max-w-md">
-                Profesionalne usluge Gestalt psihoterapije u Novom Pazaru, za
-                osvešćivanje, lični rast i emocionalno blagostanje.
-              </p>
-            </div>
-
-            {/* Desna strana */}
-            <div>
-              <h3 className="text-xl font-serif mb-4">Brzi linkovi</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#home"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Početna
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#about"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    O meni
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#gestalt"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Gestalt
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#services"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Usluge
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Kontakt
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+          <div className=" text-center text-gray-400">
             <p>
               &copy; 2025 Gestalt Psihoterapija Novi Pazar. Sva prava zadržana.
             </p>
           </div>
-        </div>
       </footer>
     </div>
   );
