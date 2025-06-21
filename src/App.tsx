@@ -74,8 +74,8 @@ function App() {
       )}
 
       {/* Navigation */}
-      <nav className="bg-white shadow-sm fixed w-full z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="bg-white shadow-sm fixed w-full z-50">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <h1 className="text-2xl font-serif text-teal-700">
@@ -165,7 +165,7 @@ function App() {
               </button>
             </div>
           </div>
-        </div>
+        </nav>
 
         {/* Mobile navigation */}
         <div className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out ${
@@ -246,65 +246,67 @@ function App() {
             </div>
           </div>
         </div>
-      </nav>
+      </header>
 
       {/* Hero section */}
-      <section id="home" className="pt-20">
-        <div className="relative h-[600px]">
-          <img
-            src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-            alt="Mirna terapijska soba"
-            className="w-full h-full object-cover filter blur-sm"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-40">
-            <div className="max-w-7xl mx-auto px-4 h-full flex items-center">
-              <div className="grid md:grid-cols-2 gap-12 w-full">
-                {/* Left column */}
-                <div className="text-white">
-                  <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif mb-3 md:mb-4 lg:mb-6">
-                    {data.hero.title}
-                  </h1>
-                  <p className="text-sm md:text-lg lg:text-xl mb-4 md:mb-6 lg:mb-8">
-                    {data.hero.description}
-                  </p>
-                  <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
-                    {data.hero.additionalText}
-                  </p>
-                </div>
-                
-                {/* Right column */}
-                <div className="text-white">
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-serif mb-3 md:mb-4 lg:mb-6">
-                    {data.title}
-                  </h2>
-                  <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
-                    {data.hero.approach}
-                  </p>
-                  <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
-                    {data.hero.schemaInfo}
-                  </p>
+      <main>
+        <section id="home" className="pt-20">
+          <div className="relative h-[600px]">
+            <img
+              src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+              alt="Mirna terapijska soba za psihoterapiju u Novom Pazaru"
+              className="w-full h-full object-cover filter blur-sm"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40">
+              <div className="max-w-7xl mx-auto px-4 h-full flex items-center">
+                <div className="grid md:grid-cols-2 gap-12 w-full">
+                  {/* Left column */}
+                  <article className="text-white">
+                    <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif mb-3 md:mb-4 lg:mb-6">
+                      {data.hero.title}
+                    </h1>
+                    <p className="text-sm md:text-lg lg:text-xl mb-4 md:mb-6 lg:mb-8">
+                      {data.hero.description}
+                    </p>
+                    <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
+                      {data.hero.additionalText}
+                    </p>
+                  </article>
+                  
+                  {/* Right column */}
+                  <article className="text-white">
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-serif mb-3 md:mb-4 lg:mb-6">
+                      {data.title}
+                    </h2>
+                    <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
+                      {data.hero.approach}
+                    </p>
+                    <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
+                      {data.hero.schemaInfo}
+                    </p>
+                  </article>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       {/* About Me */}
       <section id="about" className="py-16 md:py-20 bg-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
+            <figure className="relative h-[400px] md:h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
               <img
                 src="/photos/psihoterapeut.jpg"
-                alt="Suzana Mojsilović - psihoterapeut"
+                alt="Suzana Mojsilović - psihoterapeut u Novom Pazaru"
                 className="w-full h-full object-contain bg-gray-100"
               />
-            </div>
-            <div>
-              <h3 className="text-lg md:text-xl font-serif text-gray-900 mb-3 md:mb-4">
+            </figure>
+            <article>
+              <h2 className="text-lg md:text-xl font-serif text-gray-900 mb-3 md:mb-4">
                 {data.about.name}
-              </h3>
+              </h2>
               <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.about.education}
               </p>
@@ -407,7 +409,7 @@ function App() {
               <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                 {data.about.therapeuticRelationship}
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
