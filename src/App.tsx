@@ -47,6 +47,20 @@ function App() {
     });
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // Account for fixed header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {showScrollTop && (
@@ -73,31 +87,51 @@ function App() {
             <div className="hidden md:flex items-center space-x-8">
               <a
                 href="#home"
-                className="text-gray-700 hover:text-teal-600 transition-colors"
+                className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('home');
+                }}
               >
                 {data.navigation.home}
               </a>
               <a
                 href="#about"
-                className="text-gray-700 hover:text-teal-600 transition-colors"
+                className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('about');
+                }}
               >
                 {data.navigation.about}
               </a>
               <a
                 href="#gestalt"
-                className="text-gray-700 hover:text-teal-600 transition-colors"
+                className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('gestalt');
+                }}
               >
                 {data.navigation.gestalt}
               </a>
               <a
                 href="#schema"
-                className="text-gray-700 hover:text-teal-600 transition-colors"
+                className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('schema');
+                }}
               >
                 {data.navigation.schema}
               </a>
               <a
                 href="#contact"
-                className="text-gray-700 hover:text-teal-600 transition-colors"
+                className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('contact');
+                }}
               >
                 {data.navigation.contact}
               </a>
@@ -140,36 +174,56 @@ function App() {
           <div className="px-4 pt-4 pb-6 space-y-3">
             <a 
               href="#home" 
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('home');
+                setIsMenuOpen(false);
+              }}
             >
               {data.navigation.home}
             </a>
             <a 
               href="#about" 
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('about');
+                setIsMenuOpen(false);
+              }}
             >
               {data.navigation.about}
             </a>
             <a 
               href="#gestalt" 
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('gestalt');
+                setIsMenuOpen(false);
+              }}
             >
               {data.navigation.gestalt}
             </a>
             <a 
               href="#schema" 
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('schema');
+                setIsMenuOpen(false);
+              }}
             >
               {data.navigation.schema}
             </a>
             <a 
               href="#contact" 
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('contact');
+                setIsMenuOpen(false);
+              }}
             >
               {data.navigation.contact}
             </a>
