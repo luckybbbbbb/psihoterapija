@@ -56,7 +56,7 @@ function App() {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <h1 className="text-2xl font-serif text-teal-700">
-                Gestalt Psihoterapija
+                {data.title}
               </h1>
             </div>
 
@@ -109,13 +109,7 @@ function App() {
                   <option value="latinica">Latinica</option>
                 </select>
               </div>
-              
-              <a
-                href="#contact"
-                className="bg-teal-600 text-white px-6 py-2 rounded-full hover:bg-teal-700 transition-colors inline-block"
-              >
-                {data.navigation.bookAppointment}
-              </a>
+             
             </div>
 
             {/* Mobile menu button */}
@@ -180,26 +174,36 @@ function App() {
           <img
             src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
             alt="Mirna terapijska soba"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover filter blur-sm"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40">
             <div className="max-w-7xl mx-auto px-4 h-full flex items-center">
-              <div className="text-white max-w-2xl">
-                <h1 className="text-5xl font-serif mb-6">
-                  {data.hero.title}
-                </h1>
-                <p className="text-xl mb-8">
-                  {data.hero.description}
-                </p>
-                <p className="text-lg mb-8">
-                  {data.hero.additionalText}
-                </p>
-                <p className="text-lg mb-8">
-                  {data.hero.approach}
-                </p>
-                <p className="text-lg mb-8">
-                  {data.hero.schemaInfo}
-                </p>
+              <div className="grid md:grid-cols-2 gap-12 w-full">
+                {/* Left column */}
+                <div className="text-white">
+                  <h1 className="text-5xl font-serif mb-6">
+                    {data.hero.title}
+                  </h1>
+                  <p className="text-xl mb-8">
+                    {data.hero.description}
+                  </p>
+                  <p className="text-lg mb-8">
+                    {data.hero.additionalText}
+                  </p>
+                </div>
+                
+                {/* Right column */}
+                <div className="text-white">
+                  <h2 className="text-3xl font-serif mb-6">
+                    {data.title}
+                  </h2>
+                  <p className="text-lg mb-8">
+                    {data.hero.approach}
+                  </p>
+                  <p className="text-lg mb-8">
+                    {data.hero.schemaInfo}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -212,15 +216,13 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
               <img
-                src="/src/photos/psihoterapeut.jpg"
+                src="/photos/psihoterapeut.jpg"
                 alt="Suzana Mojsilović - psihoterapeut"
                 className="w-full h-full object-contain bg-gray-100"
               />
             </div>
             <div>
-              <h2 className="text-3xl font-serif text-gray-900 mb-4">
-                {data.about.title}
-              </h2>
+              
               <h3 className="text-xl font-serif text-gray-900 mb-4">
                 {data.about.name}
               </h3>
@@ -480,7 +482,7 @@ function App() {
                 {data.schema.description}
               </p>
               <h3 className="text-xl font-serif text-gray-900 mb-4">
-                Šta su maladaptivne šeme?
+                {data.schema.maladaptiveSchemasTitle}
               </h3>
               <p className="text-gray-600">
                 {data.schema.maladaptiveSchemas}
@@ -488,7 +490,7 @@ function App() {
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <h3 className="text-xl font-serif text-gray-900 mb-4">
-                Ciljevi šema terapije
+                {data.schema.goalsTitle}
               </h3>
               <p className="text-gray-600">
                 {data.schema.goals}
@@ -552,96 +554,46 @@ function App() {
           <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
             {data.contact.title}
           </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <Phone className="text-teal-600 mr-4" size={24} />
-                  <div>
-                    <h3 className="text-lg font-medium text-gray-900">
-                      {data.contact.phone}
-                    </h3>
-                  </div>
+          <div className="flex justify-center">
+            <div className="space-y-6">
+              <div className="flex items-center">
+                <Phone className="text-teal-600 mr-4" size={24} />
+                <div className="flex items-center space-x-2">
+                  <h3 className="text-lg font-medium text-gray-900">
+                    {data.contact.phone}
+                  </h3>
+                  <button
+                    onClick={() => {
+                      navigator.clipboard.writeText('+381669000012');
+                      alert('Broj telefona kopiran!');
+                    }}
+                    className="text-teal-600 hover:text-teal-700 text-sm underline"
+                    title="Kopiraj broj telefona"
+                  >
+                    {data.contact.copyText}
+                  </button>
                 </div>
-                <div className="flex items-center">
-                  <Mail className="text-teal-600 mr-4" size={24} />
-                  <div>
-                    <h3 className="text-lg font-medium text-gray-900">
-                      {data.contact.email}
-                    </h3>
-                  </div>
+              </div>
+              <div className="flex items-center">
+                <Mail className="text-teal-600 mr-4" size={24} />
+                <div>
+                  <a
+                    href="mailto:suza.psihoterapeut@gmail.com"
+                    className="text-lg font-medium text-gray-900 hover:text-teal-600 transition-colors underline"
+                  >
+                    {data.contact.email}
+                  </a>
                 </div>
-                <div className="flex items-center">
-                  <Clock className="text-teal-600 mr-4" size={24} />
-                  <div>
-                    <h3 className="text-lg font-medium text-gray-900">
-                      {data.contact.workType}
-                    </h3>
-                  </div>
+              </div>
+              <div className="flex items-center">
+                <Clock className="text-teal-600 mr-4" size={24} />
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900">
+                    {data.contact.workType}
+                  </h3>
                 </div>
               </div>
             </div>
-            <form className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Ime i prezime
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 py-3"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 py-3"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Telefon
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 py-3"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Poruka
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500 py-3"
-                  placeholder="Opišite ukratko razlog za kontakt ili postavite pitanje..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-teal-600 text-white px-6 py-3 rounded-full hover:bg-teal-700 transition-colors"
-              >
-                Pošalji poruku
-              </button>
-            </form>
           </div>
         </div>
       </section>

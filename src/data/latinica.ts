@@ -1,4 +1,5 @@
 export const latinicaData = {
+  title: "Gestalt Psihoterapija",
   navigation: {
     home: "Početna",
     about: "O meni",
@@ -40,7 +41,9 @@ export const latinicaData = {
     title: "O Šema terapiji",
     description: "Šema psihoterapija je namenjena osobama koje se suočavaju sa upornim i dugotrajnim životnim poteškoćama, u vidu ponavljajućih i samoosuđujućih obrazaca ponašanja i doživljavanja. U korenu tih obrazaca najčešće se nalazi nezadovoljenost osnovnih ljudskih razvojnih potreba, zbog čega je upravo rad na tim potrebama u središtu šema terapijskog pristupa.",
     maladaptiveSchemas: "Maladaptivne šeme predstavljaju duboko ukorenjene psihološke obrasce – uverenja o sebi, drugima i svetu. One nastaju u ranom detinjstvu kao rezultat kombinacije nezadovoljenih emocionalnih potreba, urođenog temperamenta i traumatičnih ili toksičnih iskustava. Kada se ove šeme aktiviraju, javlja se snažna unutrašnja stanja poznata kao modaliteti – trenutna psihoemocionalna stanja u kojima se osoba nalazi.",
-    goals: "Glavni ciljevi ovog terapijskog pristupa su: smanjenje intenziteta ili potpuno isceljenje šema, razvijanje modaliteta 'saosećajnog zdravog odraslog', učenje klijenta kako da na efikasan način zadovolji sopstvene emocionalne potrebe, razbijanje disfunkcionalnih obrazaca i izgradnja zdravijeg odnosa prema sebi i drugima."
+    goals: "Glavni ciljevi ovog terapijskog pristupa su: smanjenje intenziteta ili potpuno isceljenje šema, razvijanje modaliteta 'saosećajnog zdravog odraslog', učenje klijenta kako da na efikasan način zadovolji sopstvene emocionalne potrebe, razbijanje disfunkcionalnih obrazaca i izgradnja zdravijeg odnosa prema sebi i drugima.",
+    goalsTitle: "Ciljevi šema terapije",
+    maladaptiveSchemasTitle: "Šta su maladaptivne šeme?"
   },
 
   therapy: {
@@ -68,6 +71,8 @@ export const latinicaData = {
     title: "Kontakt / Zakazivanje",
     email: "E-pošta: suza.psihoterapeut@gmail.com",
     phone: "Telefon / Viber / WhatsApp: +381669000012",
-    workType: "Rad uživo u ili onlajn putem video poziva"
+    workType: "Rad uživo u ili onlajn putem video poziva",
+    copyText: "Kopiraj",
+    promene: "Promene"
   }
 }; 
