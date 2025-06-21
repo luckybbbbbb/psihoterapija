@@ -1,29 +1,25 @@
 import React from "react";
-import {
-  Menu,
-  X,
-  Phone,
-  Mail,
-  Clock,
-  ArrowUp,
-} from "lucide-react";
+import { Menu, X, Phone, Mail, Clock, ArrowUp, Eye, EyeOff } from "lucide-react";
 import { latinicaData } from "./data/latinica";
 import { cirilicaData } from "./data/cirilica";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [language, setLanguage] = React.useState<'cirilica' | 'latinica'>(() => {
-    // Load language from localStorage on initial render
-    const savedLanguage = localStorage.getItem('selectedLanguage');
-    return (savedLanguage as 'cirilica' | 'latinica') || 'cirilica';
-  });
+  const [language, setLanguage] = React.useState<"cirilica" | "latinica">(
+    () => {
+      // Load language from localStorage on initial render
+      const savedLanguage = localStorage.getItem("selectedLanguage");
+      return (savedLanguage as "cirilica" | "latinica") || "cirilica";
+    }
+  );
   const [showScrollTop, setShowScrollTop] = React.useState(false);
-  
-  const data = language === 'cirilica' ? cirilicaData : latinicaData;
+  const [showPhoneNumber, setShowPhoneNumber] = React.useState(false);
+
+  const data = language === "cirilica" ? cirilicaData : latinicaData;
 
   // Save language to localStorage whenever it changes
   React.useEffect(() => {
-    localStorage.setItem('selectedLanguage', language);
+    localStorage.setItem("selectedLanguage", language);
   }, [language]);
 
   // Handle scroll to show/hide scroll to top button
@@ -36,14 +32,14 @@ function App() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -53,10 +49,10 @@ function App() {
       const offset = 80; // Account for fixed header height
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
+
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -90,7 +86,7 @@ function App() {
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('home');
+                  scrollToSection("home");
                 }}
               >
                 {data.navigation.home}
@@ -100,7 +96,7 @@ function App() {
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('about');
+                  scrollToSection("about");
                 }}
               >
                 {data.navigation.about}
@@ -110,7 +106,7 @@ function App() {
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('gestalt');
+                  scrollToSection("gestalt");
                 }}
               >
                 {data.navigation.gestalt}
@@ -120,7 +116,7 @@ function App() {
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('schema');
+                  scrollToSection("schema");
                 }}
               >
                 {data.navigation.schema}
@@ -130,29 +126,30 @@ function App() {
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('contact');
+                  scrollToSection("contact");
                 }}
               >
                 {data.navigation.contact}
               </a>
-              
+
               {/* Language switcher */}
               <div className="flex items-center space-x-2">
-                <img 
-                  src="https://flagcdn.com/w20/rs.png" 
-                  alt="Serbian flag" 
+                <img
+                  src="https://flagcdn.com/w20/rs.png"
+                  alt="Serbian flag"
                   className="w-5 h-3"
                 />
                 <select
                   value={language}
-                  onChange={(e) => setLanguage(e.target.value as 'cirilica' | 'latinica')}
+                  onChange={(e) =>
+                    setLanguage(e.target.value as "cirilica" | "latinica")
+                  }
                   className="text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:border-teal-500"
                 >
                   <option value="cirilica">Ћирилица</option>
                   <option value="latinica">Latinica</option>
                 </select>
               </div>
-             
             </div>
 
             {/* Mobile menu button */}
@@ -168,76 +165,82 @@ function App() {
         </nav>
 
         {/* Mobile navigation */}
-        <div className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-        }`}>
+        <div
+          className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out ${
+            isMenuOpen
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+          }`}
+        >
           <div className="px-4 pt-4 pb-6 space-y-3">
-            <a 
-              href="#home" 
+            <a
+              href="#home"
               className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('home');
+                scrollToSection("home");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.home}
             </a>
-            <a 
-              href="#about" 
+            <a
+              href="#about"
               className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('about');
+                scrollToSection("about");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.about}
             </a>
-            <a 
-              href="#gestalt" 
+            <a
+              href="#gestalt"
               className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('gestalt');
+                scrollToSection("gestalt");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.gestalt}
             </a>
-            <a 
-              href="#schema" 
+            <a
+              href="#schema"
               className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('schema');
+                scrollToSection("schema");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.schema}
             </a>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('contact');
+                scrollToSection("contact");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.contact}
             </a>
-            
+
             {/* Language switcher for mobile */}
             <div className="flex items-center px-3 py-3 hover:bg-gray-50 rounded-lg transition-colors">
-              <img 
-                src="https://flagcdn.com/w20/rs.png" 
-                alt="Serbian flag" 
+              <img
+                src="https://flagcdn.com/w20/rs.png"
+                alt="Serbian flag"
                 className="w-5 h-3 mr-3"
               />
               <select
                 value={language}
-                onChange={(e) => setLanguage(e.target.value as 'cirilica' | 'latinica')}
+                onChange={(e) =>
+                  setLanguage(e.target.value as "cirilica" | "latinica")
+                }
                 className="text-base text-gray-700 bg-transparent border-none focus:outline-none focus:ring-0 cursor-pointer"
               >
                 <option value="cirilica">Ћирилица</option>
@@ -272,7 +275,7 @@ function App() {
                       {data.hero.additionalText}
                     </p>
                   </article>
-                  
+
                   {/* Right column */}
                   <article className="text-white">
                     <h2 className="text-xl md:text-2xl lg:text-3xl font-serif mb-3 md:mb-4 lg:mb-6">
@@ -312,20 +315,20 @@ function App() {
               </p>
               <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.about.gestaltLicense}
-                {language === 'cirilica' && (
-                  <a 
-                    href="https://www.gestaltstudio.org.rs/" 
-                    target="_blank" 
+                {language === "cirilica" && (
+                  <a
+                    href="https://www.gestaltstudio.org.rs/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-teal-600 hover:text-teal-700 underline ml-1"
                   >
                     (https://www.gestaltstudio.org.rs/)
                   </a>
                 )}
-                {language === 'latinica' && (
-                  <a 
-                    href="https://www.gestaltstudio.org.rs/" 
-                    target="_blank" 
+                {language === "latinica" && (
+                  <a
+                    href="https://www.gestaltstudio.org.rs/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-teal-600 hover:text-teal-700 underline ml-1"
                   >
@@ -335,20 +338,20 @@ function App() {
               </p>
               <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.about.schemaEducation}
-                {language === 'cirilica' && (
-                  <a 
-                    href="https://schematherapybelgrade.com/" 
-                    target="_blank" 
+                {language === "cirilica" && (
+                  <a
+                    href="https://schematherapybelgrade.com/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-teal-600 hover:text-teal-700 underline ml-1"
                   >
                     (https://schematherapybelgrade.com/)
                   </a>
                 )}
-                {language === 'latinica' && (
-                  <a 
-                    href="https://schematherapybelgrade.com/" 
-                    target="_blank" 
+                {language === "latinica" && (
+                  <a
+                    href="https://schematherapybelgrade.com/"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-teal-600 hover:text-teal-700 underline ml-1"
                   >
@@ -358,21 +361,21 @@ function App() {
               </p>
               <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.about.memberships}
-                {language === 'cirilica' && (
+                {language === "cirilica" && (
                   <>
                     <br />
-                    <a 
-                      href="https://savezpsihoterapeuta.org/" 
-                      target="_blank" 
+                    <a
+                      href="https://savezpsihoterapeuta.org/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-teal-600 hover:text-teal-700 underline"
                     >
                       https://savezpsihoterapeuta.org/
                     </a>
                     <br />
-                    <a 
-                      href="https://sugp.rs/" 
-                      target="_blank" 
+                    <a
+                      href="https://sugp.rs/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-teal-600 hover:text-teal-700 underline"
                     >
@@ -380,21 +383,21 @@ function App() {
                     </a>
                   </>
                 )}
-                {language === 'latinica' && (
+                {language === "latinica" && (
                   <>
                     <br />
-                    <a 
-                      href="https://savezpsihoterapeuta.org/" 
-                      target="_blank" 
+                    <a
+                      href="https://savezpsihoterapeuta.org/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-teal-600 hover:text-teal-700 underline"
                     >
                       https://savezpsihoterapeuta.org/
                     </a>
                     <br />
-                    <a 
-                      href="https://sugp.rs/" 
-                      target="_blank" 
+                    <a
+                      href="https://sugp.rs/"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-teal-600 hover:text-teal-700 underline"
                     >
@@ -413,107 +416,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Licenses Section */}
-      {/* <section id="licenses" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
-            Profesionalne licence i kvalifikacije
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-600">
-                <h3 className="text-xl font-serif text-gray-900 mb-4">
-                  Obrazovanje i akreditacije
-                </h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Diplomirani psiholog - Filozofski fakultet, Univerzitet u Beogradu</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Sertifikovani Gestalt psihoterapeut - Gestalt Psychotherapy Training Institute</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Član Saveza psihoterapeuta Srbije (SPS)</p>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-600">
-                <h3 className="text-xl font-serif text-gray-900 mb-4">
-                  Kontinuirana edukacija
-                </h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Redovno učešće na stručnim konferencijama i seminarima</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Supervizijski rad sa iskusnim Gestalt supervizorima</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Kontinuirano praćenje najnovijih istraživanja i metoda u oblasti psihoterapije</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-serif text-gray-900 mb-4">
-                  Zašto su licence važne?
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Profesionalne licence i akreditacije su ključni pokazatelji kompetentnosti i stručnosti psihoterapeuta. One garantuju da terapeut:
-                </p>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Poseduje potrebno teorijsko znanje i praktične veštine</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Radi u skladu sa etičkim kodeksom i profesionalnim standardima</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Kontinuirano unapređuje svoje znanje i veštine</p>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <h3 className="text-xl font-serif text-gray-900 mb-4">
-                  Etički standardi i poverljivost
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Kao licencirani psihoterapeut, obavezujem se na:
-                </p>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Potpunu poverljivost podataka i sadržaja terapijskih sesija</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Poštovanje profesionalnih granica i etičkih principa</p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="flex-shrink-0 h-2 w-2 mt-2 rounded-full bg-teal-500 mr-3"></div>
-                    <p>Transparentnost u radu i jasnu komunikaciju sa klijentima</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* What is Gestalt */}
       <section id="gestalt" className="py-16 md:py-20 bg-white">
@@ -640,19 +542,39 @@ function App() {
               <div className="flex items-center">
                 <Phone className="text-teal-600 mr-3 md:mr-4" size={20} />
                 <div className="flex items-center space-x-2">
-                  <h3 className="text-base md:text-lg font-medium text-gray-900">
-                    {data.contact.phone}
-                  </h3>
-                  <button
-                    onClick={() => {
-                      navigator.clipboard.writeText('+381669000012');
-                      alert('Broj telefona kopiran!');
-                    }}
-                    className="text-teal-600 hover:text-teal-700 text-xs md:text-sm underline"
-                    title="Kopiraj broj telefona"
-                  >
-                    {data.contact.copyText}
-                  </button>
+                  {showPhoneNumber ? (
+                    <>
+                      <h3 className="text-base md:text-lg font-medium text-gray-900">
+                        {data.contact.phone}
+                      </h3>
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText("+381669000012");
+                          alert("Broj telefona kopiran!");
+                        }}
+                        className="text-teal-600 hover:text-teal-700 text-xs md:text-sm underline"
+                        title="Kopiraj broj telefona"
+                      >
+                        {data.contact.copyText}
+                      </button>
+                      <button
+                        onClick={() => setShowPhoneNumber(false)}
+                        className="text-gray-500 hover:text-gray-700 text-xs md:text-sm"
+                        title="Sakrij broj telefona"
+                      >
+                        <EyeOff size={16} />
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      onClick={() => setShowPhoneNumber(true)}
+                      className="text-teal-600 hover:text-teal-700 text-base md:text-lg font-medium underline flex items-center space-x-2"
+                      title="Prikaži broj telefona"
+                    >
+                      <span>Prikaži broj telefona</span>
+                      <Eye size={16} />
+                    </button>
+                  )}
                 </div>
               </div>
               <div className="flex items-center">
@@ -681,11 +603,11 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-          <div className=" text-center text-gray-400">
-            <p>
-              &copy; 2025 Gestalt Psihoterapija Novi Pazar. Sva prava zadržana.
-            </p>
-          </div>
+        <div className=" text-center text-gray-400">
+          <p>
+            &copy; 2025 Suzana Mojsilović - Gestalt Psihoterapija.
+          </p>
+        </div>
       </footer>
     </div>
   );
