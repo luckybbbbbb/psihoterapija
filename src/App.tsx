@@ -129,23 +129,6 @@ function App() {
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="px-4 pt-4 pb-6 space-y-3">
-            {/* Language switcher for mobile */}
-            <div className="flex items-center justify-center space-x-2 mb-4 pb-4 border-b border-gray-200">
-              <img 
-                src="https://flagcdn.com/w20/rs.png" 
-                alt="Serbian flag" 
-                className="w-5 h-3"
-              />
-              <select
-                value={language}
-                onChange={(e) => setLanguage(e.target.value as 'cirilica' | 'latinica')}
-                className="text-sm border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-teal-500"
-              >
-                <option value="cirilica">Ћирилица</option>
-                <option value="latinica">Latinica</option>
-              </select>
-            </div>
-            
             <a 
               href="#home" 
               className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
@@ -181,6 +164,23 @@ function App() {
             >
               {data.navigation.contact}
             </a>
+            
+            {/* Language switcher for mobile */}
+            <div className="flex items-center px-3 py-3 hover:bg-gray-50 rounded-lg transition-colors">
+              <img 
+                src="https://flagcdn.com/w20/rs.png" 
+                alt="Serbian flag" 
+                className="w-5 h-3 mr-3"
+              />
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value as 'cirilica' | 'latinica')}
+                className="text-base text-gray-700 bg-transparent border-none focus:outline-none focus:ring-0 cursor-pointer"
+              >
+                <option value="cirilica">Ћирилица</option>
+                <option value="latinica">Latinica</option>
+              </select>
+            </div>
           </div>
         </div>
       </nav>
