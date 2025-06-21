@@ -93,7 +93,7 @@ export const latinicaData = {
     title: "Kontakt / Zakazivanje",
     email: "E-pošta: suza.psihoterapeut@gmail.com",
     phone: "Telefon / Viber / WhatsApp: +381669000012",
-    workType: "Rad uživo u ili onlajn putem video poziva",
+    workType: "Rad uživo ili onlajn putem video poziva",
     copyText: "Kopiraj",
     promene: "Promene",
   },
