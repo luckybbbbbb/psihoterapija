@@ -113,59 +113,76 @@ function App() {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center space-x-4">
-              {/* Language switcher for mobile */}
-              <div className="flex items-center space-x-2">
-                <img 
-                  src="https://flagcdn.com/w20/rs.png" 
-                  alt="Serbian flag" 
-                  className="w-4 h-3"
-                />
-                <select
-                  value={language}
-                  onChange={(e) => setLanguage(e.target.value as 'cirilica' | 'latinica')}
-                  className="text-xs border border-gray-300 rounded px-1 py-1 focus:outline-none focus:border-teal-500"
-                >
-                  <option value="cirilica">Ћирилица</option>
-                  <option value="latinica">Latinica</option>
-                </select>
-              </div>
-              
+            <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700"
+                className="text-gray-700 p-2"
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
             </div>
           </div>
         </div>
 
         {/* Mobile navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#home" className="block px-3 py-2 text-gray-700">
-                {data.navigation.home}
-              </a>
-              <a href="#about" className="block px-3 py-2 text-gray-700">
-                {data.navigation.about}
-              </a>
-              <a href="#gestalt" className="block px-3 py-2 text-gray-700">
-                {data.navigation.gestalt}
-              </a>
-              <a href="#schema" className="block px-3 py-2 text-gray-700">
-                {data.navigation.schema}
-              </a>
-              <a href="#contact" className="block px-3 py-2 text-gray-700">
-                {data.navigation.contact}
-              </a>
-              <button className="w-full mt-4 bg-teal-600 text-white px-6 py-2 rounded-full">
-                {data.navigation.bookAppointment}
-              </button>
+        <div className={`md:hidden bg-white border-t border-gray-200 transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}>
+          <div className="px-4 pt-4 pb-6 space-y-3">
+            {/* Language switcher for mobile */}
+            <div className="flex items-center justify-center space-x-2 mb-4 pb-4 border-b border-gray-200">
+              <img 
+                src="https://flagcdn.com/w20/rs.png" 
+                alt="Serbian flag" 
+                className="w-5 h-3"
+              />
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value as 'cirilica' | 'latinica')}
+                className="text-sm border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-teal-500"
+              >
+                <option value="cirilica">Ћирилица</option>
+                <option value="latinica">Latinica</option>
+              </select>
             </div>
+            
+            <a 
+              href="#home" 
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {data.navigation.home}
+            </a>
+            <a 
+              href="#about" 
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {data.navigation.about}
+            </a>
+            <a 
+              href="#gestalt" 
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {data.navigation.gestalt}
+            </a>
+            <a 
+              href="#schema" 
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {data.navigation.schema}
+            </a>
+            <a 
+              href="#contact" 
+              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {data.navigation.contact}
+            </a>
           </div>
-        )}
+        </div>
       </nav>
 
       {/* Hero section */}
@@ -181,26 +198,26 @@ function App() {
               <div className="grid md:grid-cols-2 gap-12 w-full">
                 {/* Left column */}
                 <div className="text-white">
-                  <h1 className="text-5xl font-serif mb-6">
+                  <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif mb-3 md:mb-4 lg:mb-6">
                     {data.hero.title}
                   </h1>
-                  <p className="text-xl mb-8">
+                  <p className="text-sm md:text-lg lg:text-xl mb-4 md:mb-6 lg:mb-8">
                     {data.hero.description}
                   </p>
-                  <p className="text-lg mb-8">
+                  <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
                     {data.hero.additionalText}
                   </p>
                 </div>
                 
                 {/* Right column */}
                 <div className="text-white">
-                  <h2 className="text-3xl font-serif mb-6">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-serif mb-3 md:mb-4 lg:mb-6">
                     {data.title}
                   </h2>
-                  <p className="text-lg mb-8">
+                  <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
                     {data.hero.approach}
                   </p>
-                  <p className="text-lg mb-8">
+                  <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
                     {data.hero.schemaInfo}
                   </p>
                 </div>
@@ -211,10 +228,10 @@ function App() {
       </section>
 
       {/* About Me */}
-      <section id="about" className="py-20 bg-teal-50">
+      <section id="about" className="py-16 md:py-20 bg-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
               <img
                 src="/photos/psihoterapeut.jpg"
                 alt="Suzana Mojsilović - psihoterapeut"
@@ -222,14 +239,13 @@ function App() {
               />
             </div>
             <div>
-              
-              <h3 className="text-xl font-serif text-gray-900 mb-4">
+              <h3 className="text-lg md:text-xl font-serif text-gray-900 mb-3 md:mb-4">
                 {data.about.name}
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.about.education}
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.about.gestaltLicense}
                 {language === 'cirilica' && (
                   <a 
@@ -252,7 +268,7 @@ function App() {
                   </a>
                 )}
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.about.schemaEducation}
                 {language === 'cirilica' && (
                   <a 
@@ -275,7 +291,7 @@ function App() {
                   </a>
                 )}
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.about.memberships}
                 {language === 'cirilica' && (
                   <>
@@ -322,10 +338,10 @@ function App() {
                   </>
                 )}
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                 {data.about.workApproach}
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                 {data.about.therapeuticRelationship}
               </p>
             </div>
@@ -435,34 +451,34 @@ function App() {
       </section> */}
 
       {/* What is Gestalt */}
-      <section id="gestalt" className="py-20 bg-white">
+      <section id="gestalt" className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
+          <h2 className="text-2xl md:text-3xl font-serif text-center text-gray-900 mb-8 md:mb-12">
             {data.gestalt.title}
           </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-teal-100 hover:border-teal-200 transition-colors">
-              <p className="text-gray-600 mb-4">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border-2 border-teal-100 hover:border-teal-200 transition-colors">
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.gestalt.description}
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.gestalt.approach}
               </p>
-              <p className="text-gray-600">
+              <p className="text-sm md:text-base text-gray-600">
                 {data.gestalt.benefits}
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg border-2 border-teal-100 hover:border-teal-200 transition-colors">
-              <h3 className="text-xl font-serif text-gray-900 mb-4">
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border-2 border-teal-100 hover:border-teal-200 transition-colors">
+              <h3 className="text-lg md:text-xl font-serif text-gray-900 mb-3 md:mb-4">
                 {data.therapy.title}
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.therapy.description}
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
                 {data.therapy.sessions}
               </p>
-              <p className="text-gray-600">
+              <p className="text-sm md:text-base text-gray-600">
                 {data.therapy.approach}
               </p>
             </div>
@@ -471,28 +487,28 @@ function App() {
       </section>
 
       {/* Schema Therapy */}
-      <section id="schema" className="py-20 bg-gray-50">
+      <section id="schema" className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
+          <h2 className="text-2xl md:text-3xl font-serif text-center text-gray-900 mb-8 md:mb-12">
             {data.schema.title}
           </h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <p className="text-gray-600 mb-6">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+              <p className="text-sm md:text-base text-gray-600 mb-4 md:mb-6">
                 {data.schema.description}
               </p>
-              <h3 className="text-xl font-serif text-gray-900 mb-4">
+              <h3 className="text-lg md:text-xl font-serif text-gray-900 mb-3 md:mb-4">
                 {data.schema.maladaptiveSchemasTitle}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm md:text-base text-gray-600">
                 {data.schema.maladaptiveSchemas}
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-xl font-serif text-gray-900 mb-4">
+            <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+              <h3 className="text-lg md:text-xl font-serif text-gray-900 mb-3 md:mb-4">
                 {data.schema.goalsTitle}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm md:text-base text-gray-600">
                 {data.schema.goals}
               </p>
             </div>
@@ -501,16 +517,16 @@ function App() {
       </section>
 
       {/* For Whom */}
-      <section className="py-20 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
+          <h2 className="text-2xl md:text-3xl font-serif text-center text-gray-900 mb-8 md:mb-12">
             {data.forWhom.title}
           </h2>
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gray-600 mb-6 text-lg">
+            <p className="text-sm md:text-lg text-gray-600 mb-4 md:mb-6">
               {data.forWhom.description}
             </p>
-            <p className="text-gray-600 text-lg">
+            <p className="text-sm md:text-lg text-gray-600">
               {data.forWhom.conclusion}
             </p>
           </div>
@@ -518,29 +534,29 @@ function App() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-teal-50">
+      <section className="py-16 md:py-20 bg-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
+          <h2 className="text-2xl md:text-3xl font-serif text-center text-gray-900 mb-8 md:mb-12">
             {data.faq.title}
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="text-gray-600 font-medium mb-2">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+              <p className="text-sm md:text-base text-gray-600 font-medium mb-2">
                 {data.faq.sessionDuration}
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="text-gray-600 font-medium mb-2">
+            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+              <p className="text-sm md:text-base text-gray-600 font-medium mb-2">
                 {data.faq.sessionFrequency}
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="text-gray-600 font-medium mb-2">
+            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+              <p className="text-sm md:text-base text-gray-600 font-medium mb-2">
                 {data.faq.confidentiality}
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="text-gray-600 font-medium mb-2">
+            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+              <p className="text-sm md:text-base text-gray-600 font-medium mb-2">
                 {data.faq.bigProblem}
               </p>
             </div>
@@ -549,17 +565,17 @@ function App() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="py-20 bg-teal-50">
+      <section id="contact" className="py-16 md:py-20 bg-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-center text-gray-900 mb-12">
+          <h2 className="text-2xl md:text-3xl font-serif text-center text-gray-900 mb-8 md:mb-12">
             {data.contact.title}
           </h2>
           <div className="flex justify-center">
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <div className="flex items-center">
-                <Phone className="text-teal-600 mr-4" size={24} />
+                <Phone className="text-teal-600 mr-3 md:mr-4" size={20} />
                 <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium text-gray-900">
+                  <h3 className="text-base md:text-lg font-medium text-gray-900">
                     {data.contact.phone}
                   </h3>
                   <button
@@ -567,7 +583,7 @@ function App() {
                       navigator.clipboard.writeText('+381669000012');
                       alert('Broj telefona kopiran!');
                     }}
-                    className="text-teal-600 hover:text-teal-700 text-sm underline"
+                    className="text-teal-600 hover:text-teal-700 text-xs md:text-sm underline"
                     title="Kopiraj broj telefona"
                   >
                     {data.contact.copyText}
@@ -575,20 +591,20 @@ function App() {
                 </div>
               </div>
               <div className="flex items-center">
-                <Mail className="text-teal-600 mr-4" size={24} />
+                <Mail className="text-teal-600 mr-3 md:mr-4" size={20} />
                 <div>
                   <a
                     href="mailto:suza.psihoterapeut@gmail.com"
-                    className="text-lg font-medium text-gray-900 hover:text-teal-600 transition-colors underline"
+                    className="text-base md:text-lg font-medium text-gray-900 hover:text-teal-600 transition-colors underline"
                   >
                     {data.contact.email}
                   </a>
                 </div>
               </div>
               <div className="flex items-center">
-                <Clock className="text-teal-600 mr-4" size={24} />
+                <Clock className="text-teal-600 mr-3 md:mr-4" size={20} />
                 <div>
-                  <h3 className="text-lg font-medium text-gray-900">
+                  <h3 className="text-base md:text-lg font-medium text-gray-900">
                     {data.contact.workType}
                   </h3>
                 </div>
