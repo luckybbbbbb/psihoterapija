@@ -4,7 +4,7 @@ export const latinicaData = {
     home: "Početna",
     about: "O meni",
     gestalt: "Gestalt",
-    schema: "Šema terapija",
+    schema: "Šema psihoterapija",
     contact: "Kontakt",
     bookAppointment: "Zakaži termin",
   },
@@ -49,9 +49,9 @@ export const latinicaData = {
   },
 
   schema: {
-    title: "O Šema terapiji",
+    title: "O Šema psihoterapiji",
     description:
-      "Šema psihoterapija je namenjena osobama koje se suočavaju sa upornim i dugotrajnim životnim poteškoćama, u vidu ponavljajućih i samoosuđujućih obrazaca ponašanja i doživljavanja. U korenu tih obrazaca najčešće se nalazi nezadovoljenost osnovnih ljudskih razvojnih potreba, zbog čega je upravo rad na tim potrebama u središtu šema terapijskog pristupa.",
+      "Šema psihoterapija je namenjena osobama koje se suočavaju sa upornim i dugotrajnim životnim poteškoćama, u vidu ponavljajućih i samoosuđujućih obrazaca ponašanja i doživljavanja. U korenu tih obrazaca najčešće se nalazi nezadovoljenost osnovnih ljudskih razvojnih potreba, zbog čega je upravo rad na tim potrebama u središtu šema psihoterapijskog pristupa.",
     maladaptiveSchemas:
       "Maladaptivne šeme predstavljaju duboko ukorenjene psihološke obrasce – uverenja o sebi, drugima i svetu. One nastaju u ranom detinjstvu kao rezultat kombinacije nezadovoljenih emocionalnih potreba, urođenog temperamenta i traumatičnih ili toksičnih iskustava. Kada se ove šeme aktiviraju, javlja se snažna unutrašnja stanja poznata kao modaliteti – trenutna psihoemocionalna stanja u kojima se osoba nalazi.",
     goals:
