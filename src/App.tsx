@@ -76,7 +76,7 @@ function App() {
                 alt="Logo" 
                 className="w-8 h-8 mr-3"
               />
-              <h1 className="text-2xl font-serif text-teal-700">
+              <h1 className="text-lg md:text-2xl font-serif text-teal-700">
                 {data.title}
               </h1>
             </div>
