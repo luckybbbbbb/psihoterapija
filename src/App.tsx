@@ -7,7 +7,6 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [language, setLanguage] = React.useState<"cirilica" | "latinica">(
     () => {
-      // Load language from localStorage on initial render
       const savedLanguage = localStorage.getItem("selectedLanguage");
       return (savedLanguage as "cirilica" | "latinica") || "cirilica";
     }
@@ -17,12 +16,10 @@ function App() {
 
   const data = language === "cirilica" ? cirilicaData : latinicaData;
 
-  // Save language to localStorage whenever it changes
   React.useEffect(() => {
     localStorage.setItem("selectedLanguage", language);
   }, [language]);
 
-  // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -46,7 +43,7 @@ function App() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80; // Account for fixed header height
+      const offset = 80; 
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
