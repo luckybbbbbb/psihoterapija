@@ -75,7 +75,7 @@ function App() {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <img 
-                src="/src/photos/1.png" 
+                src="/photos/1.png" 
                 alt="Logo" 
                 className="w-8 h-8 mr-3"
               />
