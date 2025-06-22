@@ -74,6 +74,11 @@ function App() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20">
             <div className="flex items-center">
+              <img 
+                src="/src/photos/1.png" 
+                alt="Logo" 
+                className="w-8 h-8 mr-3"
+              />
               <h1 className="text-2xl font-serif text-teal-700">
                 {data.title}
               </h1>
