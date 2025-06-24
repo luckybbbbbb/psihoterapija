@@ -117,7 +117,7 @@ function App() {
               <img 
                 src="/photos/1.png" 
                 alt="Logo - Tvoj Psihoterapeut" 
-                className="w-8 h-8 mr-3"
+                className="w-12 h-12 md:w-12 md:h-12 mr-3"
               />
               <h1 className="text-lg md:text-2xl font-serif text-teal-700">
                 {data.title}
