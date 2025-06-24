@@ -303,7 +303,7 @@ function App() {
       {/* Hero section */}
       <main>
         <section id="home" className="pt-20">
-          <div className="relative h-[600px]">
+          <div className="relative h-[700px] sm:h-[600px]">
             <img
               src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
               alt="Mirna terapijska soba za psihoterapiju u Novom Pazaru"
