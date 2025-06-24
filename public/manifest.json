@@ -1,0 +1,27 @@
+{
+  "name": "Tvoj Psihoterapeut - Suzana Mojsilović",
+  "short_name": "Tvoj Psihoterapeut",
+  "description": "Gestalt i Shema psihoterapija sa licenciranim terapeutom Suzana Mojsilović u Novom Pazaru. Online i uživo sesije.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d9488",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/photos/2.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/photos/2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "medical", "lifestyle"],
+  "lang": "sr",
+  "dir": "ltr"
+} 

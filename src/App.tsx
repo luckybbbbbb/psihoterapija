@@ -2,6 +2,13 @@ import React from "react";
 import { Menu, X, Phone, Mail, Clock, ArrowUp, Eye, EyeOff } from "lucide-react";
 import { latinicaData } from "./data/latinica";
 import { cirilicaData } from "./data/cirilica";
+import SEO from "./components/SEO";
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -54,8 +61,44 @@ function App() {
     }
   };
 
+  const trackEvent = (action: string, category: string, label?: string) => {
+    if (window.gtag) {
+      window.gtag('event', action, {
+        event_category: category,
+        event_label: label,
+        value: 1
+      });
+    }
+  };
+
+  const handlePhoneClick = () => {
+    trackEvent('phone_click', 'contact', 'phone_number_revealed');
+    setShowPhoneNumber(true);
+  };
+
+  const handleEmailClick = () => {
+    trackEvent('email_click', 'contact', 'email_clicked');
+  };
+
+  const handleAppointmentClick = () => {
+    trackEvent('appointment_click', 'conversion', 'appointment_button');
+    scrollToSection("contact");
+  };
+
+  const handleAboutClick = () => {
+    trackEvent('about_click', 'navigation', 'about_section');
+    scrollToSection("about");
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Psihoterapija Novi Pazar - Suzana Mojsilović"
+        description="Gestalt i Schema psihoterapija sa licenciranim terapeutom Suzana Mojsilović u Novom Pazaru. Online i uživo sesije. Anksioznost, depresija, stres, odnosi."
+        keywords="psihoterapija, novi pazar, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, terapeut, srbija"
+        language={language}
+      />
+      
       {showScrollTop && (
         <button
           onClick={scrollToTop}
@@ -68,12 +111,12 @@ function App() {
 
       {/* Navigation */}
       <header className="bg-white shadow-sm fixed w-full z-50">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <img 
                 src="/photos/1.png" 
-                alt="Logo" 
+                alt="Logo - Tvoj Psihoterapeut" 
                 className="w-8 h-8 mr-3"
               />
               <h1 className="text-lg md:text-2xl font-serif text-teal-700">
@@ -147,6 +190,7 @@ function App() {
                     setLanguage(e.target.value as "cirilica" | "latinica")
                   }
                   className="text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:border-teal-500"
+                  aria-label="Select language"
                 >
                   <option value="cirilica">Ћирилица</option>
                   <option value="latinica">Latinica</option>
@@ -159,6 +203,8 @@ function App() {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-700 p-2"
+                aria-label="Toggle menu"
+                aria-expanded={isMenuOpen}
               >
                 {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
@@ -244,6 +290,7 @@ function App() {
                   setLanguage(e.target.value as "cirilica" | "latinica")
                 }
                 className="text-base text-gray-700 bg-transparent border-none focus:outline-none focus:ring-0 cursor-pointer"
+                aria-label="Select language"
               >
                 <option value="cirilica">Ћирилица</option>
                 <option value="latinica">Latinica</option>
@@ -276,6 +323,22 @@ function App() {
                     <p className="text-sm md:text-base lg:text-lg mb-4 md:mb-6 lg:mb-8">
                       {data.hero.additionalText}
                     </p>
+                    
+                    {/* Call to action */}
+                    <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                      <button
+                        onClick={handleAppointmentClick}
+                        className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
+                      >
+                        {data.cta.book}
+                      </button>
+                      <button
+                        onClick={handleAboutClick}
+                        className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-lg font-medium transition-colors duration-300"
+                      >
+                        {data.cta.about}
+                      </button>
+                    </div>
                   </article>
 
                   {/* Right column */}
@@ -553,6 +616,7 @@ function App() {
                         onClick={() => {
                           navigator.clipboard.writeText("+381669000012");
                           alert("Broj telefona kopiran!");
+                          trackEvent('phone_copy', 'contact', 'phone_number_copied');
                         }}
                         className="text-teal-600 hover:text-teal-700 text-xs md:text-sm underline"
                         title="Kopiraj broj telefona"
@@ -569,7 +633,7 @@ function App() {
                     </>
                   ) : (
                     <button
-                      onClick={() => setShowPhoneNumber(true)}
+                      onClick={handlePhoneClick}
                       className="text-teal-600 hover:text-teal-700 text-base md:text-lg font-medium underline flex items-center space-x-2"
                       title="Prikaži broj telefona"
                     >
@@ -584,6 +648,7 @@ function App() {
                 <div>
                   <a
                     href="mailto:suza.psihoterapeut@gmail.com"
+                    onClick={handleEmailClick}
                     className="text-base md:text-lg font-medium text-gray-900 hover:text-teal-600 transition-colors underline"
                   >
                     {data.contact.email}
@@ -605,7 +670,7 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
-        <div className=" text-center text-gray-400">
+        <div className="text-center text-gray-400">
           <p>
             &copy; {data.copyright.copyright}
           </p>

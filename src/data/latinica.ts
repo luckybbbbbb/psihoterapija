@@ -4,7 +4,7 @@ export const latinicaData = {
     home: "Početna",
     about: "O meni",
     gestalt: "Gestalt",
-    schema: "Šema psihoterapija",
+    schema: "Shema psihoterapija",
     contact: "Kontakt",
     bookAppointment: "Zakaži termin",
   },
@@ -99,5 +99,10 @@ export const latinicaData = {
   },
   copyright: {
     copyright: "Suzana Mojsilović - Gestalt Psihoterapija",
+  },
+
+  cta: {
+    book: "Zakažite prvu sesiju",
+    about: "Saznajte više o meni"
   },
 };

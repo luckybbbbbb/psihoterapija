@@ -101,4 +101,9 @@ export const cirilicaData = {
   copyright: {
     copyright: "Сузана Мојсиловић - Гесталт Психотерапија",
   },
+
+  cta: {
+    book: "Закажите прву сесију",
+    about: "Сазнајте више о мени"
+  },
 };
