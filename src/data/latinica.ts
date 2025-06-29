@@ -18,7 +18,7 @@ export const latinicaData = {
     approach:
       "Moj pristup je zasnovan na Gestalt psihoterapiji – terapiji prisustva, svesnosti i autentičnog odnosa. Cilj nije da vas menjam, već da vas pratim i podržim u potrazi za sopstvenim autentičnim putem.",
     schemaInfo:
-      "Osim Gestalt psihoterapije pravac u kome se trenutno usavršavam je Šema psihoterapija, integrativni psihoterapijski pristup koji objedinjuje elemente iz kognitivno-bihejvioralne terapije, psihodinamskog modela, Gestalt terapije i modela afektivne vezanosti.",
+      "Osim Gestalt psihoterapije pravac u kome se trenutno usavršavam je Shema psihoterapija, integrativni psihoterapijski pristup koji objedinjuje elemente iz kognitivno-bihejvioralne terapije, psihodinamskog modela, Gestalt terapije i modela afektivne vezanosti.",
   },
 
   about: {
@@ -28,7 +28,7 @@ export const latinicaData = {
     gestaltLicense:
       "Licencirani sam Gestalt psihoterapeut (Edukaciju iz Gestalt psihoterapije u trajanju od pet semestara završila sam na Evropski akreditovanom obrazovnom institut iz oblasti psihoterapije – Studio za edukaciju Beograd (EAPTI-SEB)",
     gestaltLink: "https://www.gestaltstudio.org.rs/",
-    schemaEducation: "i Šema psihoterapeut sam u edukaciji",
+    schemaEducation: "i Shema psihoterapeut sam u edukaciji",
     schemaLink: "https://schematherapybelgrade.com/",
     memberships:
       "Član sam: SDPTS – Saveza društava psihoterapeuta Srbije i SUGP – Srpskog udruženja za gestalt psihoterapiju",
@@ -49,15 +49,15 @@ export const latinicaData = {
   },
 
   schema: {
-    title: "O Šema psihoterapiji",
+    title: "O Shema psihoterapiji",
     description:
-      "Šema psihoterapija je namenjena osobama koje se suočavaju sa upornim i dugotrajnim životnim poteškoćama, u vidu ponavljajućih i samoosuđujućih obrazaca ponašanja i doživljavanja. U korenu tih obrazaca najčešće se nalazi nezadovoljenost osnovnih ljudskih razvojnih potreba, zbog čega je upravo rad na tim potrebama u središtu šema psihoterapijskog pristupa.",
+      "Shema psihoterapija je namenjena osobama koje se suočavaju sa upornim i dugotrajnim životnim poteškoćama, u vidu ponavljajućih i samoosuđujućih obrazaca ponašanja i doživljavanja. U korenu tih obrazaca najčešće se nalazi nezadovoljenost osnovnih ljudskih razvojnih potreba, zbog čega je upravo rad na tim potrebama u središtu shema psihoterapijskog pristupa.",
     maladaptiveSchemas:
-      "Maladaptivne šeme predstavljaju duboko ukorenjene psihološke obrasce – uverenja o sebi, drugima i svetu. One nastaju u ranom detinjstvu kao rezultat kombinacije nezadovoljenih emocionalnih potreba, urođenog temperamenta i traumatičnih ili toksičnih iskustava. Kada se ove šeme aktiviraju, javlja se snažna unutrašnja stanja poznata kao modaliteti – trenutna psihoemocionalna stanja u kojima se osoba nalazi.",
+      "Maladaptivne sheme predstavljaju duboko ukorenjene psihološke obrasce – uverenja o sebi, drugima i svetu. One nastaju u ranom detinjstvu kao rezultat kombinacije nezadovoljenih emocionalnih potreba, urođenog temperamenta i traumatičnih ili toksičnih iskustava. Kada se ove sheme aktiviraju, javlja se snažna unutrašnja stanja poznata kao modaliteti – trenutna psihoemocionalna stanja u kojima se osoba nalazi.",
     goals:
-      "Glavni ciljevi ovog terapijskog pristupa su: smanjenje intenziteta ili potpuno isceljenje šema, razvijanje modaliteta 'saosećajnog zdravog odraslog', učenje klijenta kako da na efikasan način zadovolji sopstvene emocionalne potrebe, razbijanje disfunkcionalnih obrazaca i izgradnja zdravijeg odnosa prema sebi i drugima.",
-    goalsTitle: "Ciljevi šema terapije",
-    maladaptiveSchemasTitle: "Šta su maladaptivne šeme?",
+      "Glavni ciljevi ovog terapijskog pristupa su: smanjenje intenziteta ili potpuno isceljenje shema, razvijanje modaliteta 'saosećajnog zdravog odraslog', učenje klijenta kako da na efikasan način zadovolji sopstvene emocionalne potrebe, razbijanje disfunkcionalnih obrazaca i izgradnja zdravijeg odnosa prema sebi i drugima.",
+    goalsTitle: "Ciljevi shema terapije",
+    maladaptiveSchemasTitle: "Šta su maladaptivne sheme?",
   },
 
   therapy: {
