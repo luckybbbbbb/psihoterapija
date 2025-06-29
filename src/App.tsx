@@ -94,8 +94,8 @@ function App() {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Psihoterapija Novi Pazar - Suzana Mojsilović"
-        description="Gestalt i Schema psihoterapija sa licenciranim terapeutom Suzana Mojsilović u Novom Pazaru. Online i uživo sesije. Anksioznost, depresija, stres, odnosi."
-        keywords="psihoterapija, novi pazar, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, terapeut, srbija"
+        description="Gestalt i Schema psihoterapija sa licenciranim psihoterapeutom Suzana Mojsilović u Novom Pazaru. Online i uživo sesije. Anksioznost, depresija, stres, odnosi."
+        keywords="psihoterapija, novi pazar, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, psihoterapeut, srbija"
         language={language}
       />
       

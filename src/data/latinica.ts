@@ -65,7 +65,7 @@ export const latinicaData = {
     description:
       "Terapijski proces se odvija u atmosferi poverenja, bez osude. Seanse traju 50 minuta i održavaju se jednom nedeljno, ili po dogovoru.",
     sessions:
-      "Na seansama se bavimo onim što je za vas u datom trenutku važno. To mogu biti osećanja, misli, telesni doživljaji, sećanja ili odnos sa mnom kao terapeutom.",
+      "Na seansama se bavimo onim što je za vas u datom trenutku važno. To mogu biti osećanja, misli, telesni doživljaji, sećanja ili odnos sa mnom kao psihoterapeutom.",
     approach:
       "Ne postoji unapred zadat scenario – fokus je na tome da u zajedničkom prostoru postanete svesni onoga što se dešava u vama i oko vas.",
   },

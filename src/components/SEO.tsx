@@ -13,8 +13,8 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title = "Psihoterapija Novi Pazar - Suzana Mojsilović | Online i Uživo Sesije",
-  description = "Gestalt i Schema psihoterapija sa licenciranim terapeutom Suzana Mojsilović u Novom Pazaru. Online i uživo sesije. Anksioznost, depresija, stres, odnosi.",
-  keywords = "psihoterapija, novi pazar, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, terapeut, srbija",
+  description = "Gestalt i Schema psihoterapija sa licenciranim psihoterapeutom Suzana Mojsilović u Novom Pazaru. Online i uživo sesije. Anksioznost, depresija, stres, odnosi.",
+  keywords = "psihoterapija, novi pazar, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, psihoterapeut, srbija",
   image = "https://www.tvoj-psihoterapeut.rs/photos/psihoterapeut.jpg",
   url = "https://www.tvoj-psihoterapeut.rs/",
   type = "website",
