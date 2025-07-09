@@ -12,28 +12,28 @@ export const latinicaData = {
   hero: {
     title: "Dobro došli",
     description:
-      "Ovo je prostor podrške, razumevanja i ličnog razvoja. Verujem da je svaka osoba jedinstvena i da u sebi nosi potencijal za promenu, isceljenje i celovitost.",
+      "Verujem da je svaka osoba jedinstvena i da u sebi nosi potencijal za promenu, isceljenje i celovitost.",
     additionalText:
-      "Bilo da se trenutno suočavate sa životnim izazovima, emocionalnom napetošću, osećajem praznine ili jednostavno želite da dublje upoznate sebe – ovde ste dobrodošli.",
+      "Bilo da se trenutno suočavate sa životnim izazovima, emocionalnom napetošću, osećajem praznine ili jednostavno želite da dublje upoznate sebe – na pravom ste mestu.",
     approach:
-      "Moj pristup je zasnovan na Gestalt psihoterapiji – terapiji prisustva, svesnosti i autentičnog odnosa. Cilj nije da vas menjam, već da vas pratim i podržim u potrazi za sopstvenim autentičnim putem.",
+      "Gestalt psihoterapija je terapija prisustva, svesnosti i autentičnog odnosa. Na vama i meni je da pronađemo zajednički način kako iskoristiti gestalt pristupe (ili tehnike) kako bismo došli do onog što je najbolje za vas. Cilj nije da vas menjam, već da vas pratim i podržim u potrazi za sopstvenim autentičnim putem.",
     schemaInfo:
       "Osim Gestalt psihoterapije pravac u kome se trenutno usavršavam je Shema psihoterapija, integrativni psihoterapijski pristup koji objedinjuje elemente iz kognitivno-bihejvioralne terapije, psihodinamskog modela, Gestalt terapije i modela afektivne vezanosti.",
   },
 
   about: {
     title: "O meni",
-    name: "Zovem se Suzana Mojsilović",
+    name: "Moje ime je Suzana Mojsilović i ja sam gestalt psihoterapeut i shema terapeut u edukaciji",
     education: "Završila sam osnovne i master studije psihologije",
     gestaltLicense:
-      "Licencirani sam Gestalt psihoterapeut (Edukaciju iz Gestalt psihoterapije u trajanju od pet semestara završila sam na Evropski akreditovanom obrazovnom institut iz oblasti psihoterapije – Studio za edukaciju Beograd (EAPTI-SEB)",
+      "Licencirani sam Gestalt psihoterapeut (Edukaciju iz Gestalt psihoterapije u trajanju od pet semestara završila sam na Evropski akreditovanom obrazovnom institutu iz oblasti psihoterapije – Studio za edukaciju Beograd (EAPTI-SEB)",
     gestaltLink: "https://www.gestaltstudio.org.rs/",
     schemaEducation: "i Shema psihoterapeut sam u edukaciji",
     schemaLink: "https://schematherapybelgrade.com/",
     memberships:
       "Član sam: SDPTS – Saveza društava psihoterapeuta Srbije i SUGP – Srpskog udruženja za gestalt psihoterapiju",
     workApproach:
-      "U svom radu nastojim da stvorim bezbedan i podržavajući prostor u kome klijenti mogu da istražuju svoja osećanja, misli i unutrašnje konflikte. Vera u kapacitet svakog čoveka za promenu i rast vodi me u svakoj seansi.",
+      "U svom radu nastojim da stvorim bezbedan i podržavajući prostor u kome klijenti mogu da istražuju svoja osećanja, misli i unutrašnje konflikte. U svakoj seansi vodim se uverenjem da čovek može da se promeni i raste radom na sebi.",
     therapeuticRelationship:
       "Smatram da je terapijski odnos osnova isceljenja. Upravo kroz dijalog, svesnost i prisustvo dolazimo do dubljeg razumevanja sebe i sveta oko nas.",
   },
@@ -80,13 +80,15 @@ export const latinicaData = {
 
   faq: {
     title: "Česta pitanja",
-    sessionDuration: "Koliko traje jedna seansa? Seansa traje 50 minuta.",
+    sessionDuration: "Koliko traje jedna seansa?\n\nSeansa traje 50 minuta.",
     sessionFrequency:
-      "Koliko često se seanse održavaju? Obično jednom nedeljno, ali je moguć i drugačiji dogovor.",
+      "Koliko često se seanse održavaju?\n\nObično jednom nedeljno, ali je moguć i drugačiji dogovor.",
     confidentiality:
-      "Da li je ono što kažem poverljivo? Da, terapijski rad je strogo poverljiv i podložan etičkom kodeksu struke.",
+      "Da li je ono što kažem poverljivo?\n\nDa, terapijski rad je strogo poverljiv i podložan etičkom kodeksu struke.",
     bigProblem:
-      "Da li moram imati 'veliki problem' da bih išao na terapiju? Ne. Dovoljna je i želja da se bolje razumete i podržite sebe.",
+      "Da li moram imati 'veliki problem' da bih išao na terapiju?\n\nNe postoji mali veliki problem, postoje stvari koje nas muče, koje nam ometaju svakodnevnicu i to je već dovoljan razlog da se obratimo licu koje nam jedino, istinski, može pomoći a to je psihoterapeut.",
+    howToKnowTherapist:
+      "Kako da znam ko je psihoterapeut?\n\nPsihoterapeut mora da ima završene studije psihologije ili medicine, zatim da je prošao specijalnu edukaciju iz psihoterapije (koja traje najmanje 4 godine), da je član stručnih udruženja i da radi pod supervizijom. Uvek možete proveriti licencu i članstvo u stručnim udruženjima.",
   },
 
   contact: {

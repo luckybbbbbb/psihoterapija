@@ -573,24 +573,34 @@ function App() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <p className="text-sm md:text-base text-gray-600 font-medium mb-2">
-                {data.faq.sessionDuration}
-              </p>
+              <div className="text-sm md:text-base text-gray-600">
+                <div className="font-bold mb-2" dangerouslySetInnerHTML={{ __html: data.faq.sessionDuration.split('\n\n')[0] }} />
+                <div className="italic" dangerouslySetInnerHTML={{ __html: data.faq.sessionDuration.split('\n\n')[1] }} />
+              </div>
             </div>
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <p className="text-sm md:text-base text-gray-600 font-medium mb-2">
-                {data.faq.sessionFrequency}
-              </p>
+              <div className="text-sm md:text-base text-gray-600">
+                <div className="font-bold mb-2" dangerouslySetInnerHTML={{ __html: data.faq.sessionFrequency.split('\n\n')[0] }} />
+                <div className="italic" dangerouslySetInnerHTML={{ __html: data.faq.sessionFrequency.split('\n\n')[1] }} />
+              </div>
             </div>
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <p className="text-sm md:text-base text-gray-600 font-medium mb-2">
-                {data.faq.confidentiality}
-              </p>
+              <div className="text-sm md:text-base text-gray-600">
+                <div className="font-bold mb-2" dangerouslySetInnerHTML={{ __html: data.faq.confidentiality.split('\n\n')[0] }} />
+                <div className="italic" dangerouslySetInnerHTML={{ __html: data.faq.confidentiality.split('\n\n')[1] }} />
+              </div>
             </div>
             <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
-              <p className="text-sm md:text-base text-gray-600 font-medium mb-2">
-                {data.faq.bigProblem}
-              </p>
+              <div className="text-sm md:text-base text-gray-600">
+                <div className="font-bold mb-2" dangerouslySetInnerHTML={{ __html: data.faq.bigProblem.split('\n\n')[0] }} />
+                <div className="italic" dangerouslySetInnerHTML={{ __html: data.faq.bigProblem.split('\n\n')[1] }} />
+              </div>
+            </div>
+            <div className="bg-white p-4 md:p-6 rounded-lg shadow-md">
+              <div className="text-sm md:text-base text-gray-600">
+                <div className="font-bold mb-2" dangerouslySetInnerHTML={{ __html: data.faq.howToKnowTherapist.split('\n\n')[0] }} />
+                <div className="italic" dangerouslySetInnerHTML={{ __html: data.faq.howToKnowTherapist.split('\n\n')[1] }} />
+              </div>
             </div>
           </div>
         </div>
