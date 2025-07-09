@@ -26,7 +26,7 @@ export const latinicaData = {
     name: "Moje ime je Suzana Mojsilović i ja sam gestalt psihoterapeut i shema terapeut u edukaciji",
     education: "Završila sam osnovne i master studije psihologije",
     gestaltLicense:
-      "Licencirani sam Gestalt psihoterapeut (Edukaciju iz Gestalt psihoterapije u trajanju od pet semestara završila sam na Evropski akreditovanom obrazovnom institutu iz oblasti psihoterapije – Studio za edukaciju Beograd (EAPTI-SEB)",
+      "Licencirani sam Gestalt psihoterapeut (Edukaciju iz Gestalt psihoterapije u trajanju od četiri i po semestra završila sam na Evropski akreditovanom obrazovnom institutu iz oblasti psihoterapije – Studio za edukaciju Beograd (EAPTI-SEB)",
     gestaltLink: "https://www.gestaltstudio.org.rs/",
     schemaEducation: "i Shema psihoterapeut sam u edukaciji",
     schemaLink: "https://schematherapybelgrade.com/",
