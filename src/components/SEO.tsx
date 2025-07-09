@@ -22,6 +22,9 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
   const siteName = "Tvoj Psihoterapeut";
   const fullTitle = `${title} | ${siteName}`;
+  
+  // Ensure URL doesn't have hash fragments for canonical
+  const canonicalUrl = url.split('#')[0];
 
   return (
     <Helmet>
@@ -31,31 +34,38 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="language" content={language === 'cirilica' ? 'Serbian (Cyrillic)' : 'Serbian (Latin)'} />
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="sr_RS" />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
+      <meta property="twitter:url" content={canonicalUrl} />
       <meta property="twitter:title" content={fullTitle} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      {/* Canonical URL - always point to root without hash */}
+      <link rel="canonical" href="https://www.tvoj-psihoterapeut.rs/" />
       
       {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
       <meta name="author" content="Suzana Mojsilović" />
       <meta name="geo.region" content="RS" />
       <meta name="geo.placename" content="Novi Pazar" />
+      <meta name="geo.position" content="43.1376;20.5156" />
+      <meta name="ICBM" content="43.1376, 20.5156" />
+      
+      {/* Prevent indexing of hash URLs */}
+      <meta name="fragment" content="!" />
     </Helmet>
   );
 };

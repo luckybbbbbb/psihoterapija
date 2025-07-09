@@ -126,56 +126,36 @@ function App() {
 
             {/* Desktop navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="#home"
+              <button
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("home");
-                }}
+                onClick={() => scrollToSection("home")}
               >
                 {data.navigation.home}
-              </a>
-              <a
-                href="#about"
+              </button>
+              <button
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("about");
-                }}
+                onClick={() => scrollToSection("about")}
               >
                 {data.navigation.about}
-              </a>
-              <a
-                href="#gestalt"
+              </button>
+              <button
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("gestalt");
-                }}
+                onClick={() => scrollToSection("gestalt")}
               >
                 {data.navigation.gestalt}
-              </a>
-              <a
-                href="#schema"
+              </button>
+              <button
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("schema");
-                }}
+                onClick={() => scrollToSection("schema")}
               >
                 {data.navigation.schema}
-              </a>
-              <a
-                href="#contact"
+              </button>
+              <button
                 className="text-gray-700 hover:text-teal-600 transition-colors cursor-pointer"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection("contact");
-                }}
+                onClick={() => scrollToSection("contact")}
               >
                 {data.navigation.contact}
-              </a>
+              </button>
 
               {/* Language switcher */}
               <div className="flex items-center space-x-2">
@@ -221,61 +201,51 @@ function App() {
           }`}
         >
           <div className="px-4 pt-4 pb-6 space-y-3">
-            <a
-              href="#home"
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
+            <button
+              className="block w-full text-left px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={() => {
                 scrollToSection("home");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.home}
-            </a>
-            <a
-              href="#about"
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
+            </button>
+            <button
+              className="block w-full text-left px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={() => {
                 scrollToSection("about");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.about}
-            </a>
-            <a
-              href="#gestalt"
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
+            </button>
+            <button
+              className="block w-full text-left px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={() => {
                 scrollToSection("gestalt");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.gestalt}
-            </a>
-            <a
-              href="#schema"
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
+            </button>
+            <button
+              className="block w-full text-left px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={() => {
                 scrollToSection("schema");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.schema}
-            </a>
-            <a
-              href="#contact"
-              className="block px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
+            </button>
+            <button
+              className="block w-full text-left px-3 py-3 text-gray-700 text-base hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+              onClick={() => {
                 scrollToSection("contact");
                 setIsMenuOpen(false);
               }}
             >
               {data.navigation.contact}
-            </a>
+            </button>
 
             {/* Language switcher for mobile */}
             <div className="flex items-center px-3 py-3 hover:bg-gray-50 rounded-lg transition-colors">
