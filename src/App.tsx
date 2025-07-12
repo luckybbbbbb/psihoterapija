@@ -272,7 +272,7 @@ function App() {
 
       {/* Hero section */}
       <main>
-        <section id="home" className="pt-20">
+        <section id="home" className="pt-20 pb-20 md:pb-0">
           <div className="relative h-[700px] sm:h-[600px]">
             <img
               src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
@@ -294,8 +294,8 @@ function App() {
                       {data.hero.additionalText}
                     </p>
                     
-                    {/* Call to action */}
-                    <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                    {/* Call to action - desktop only */}
+                    <div className="hidden md:flex flex-col sm:flex-row gap-4 mt-8">
                       <button
                         onClick={handleAppointmentClick}
                         className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
@@ -312,7 +312,7 @@ function App() {
                   </article>
 
                   {/* Right column */}
-                  <article className="text-white">
+                  <article className="text-white pb-40 md:pb-0">
                     <h2 className="text-xl md:text-2xl lg:text-3xl font-serif mb-3 md:mb-4 lg:mb-6">
                       {data.title}
                     </h2>
@@ -323,6 +323,24 @@ function App() {
                       {data.hero.schemaInfo}
                     </p>
                   </article>
+                </div>
+                
+                {/* Call to action buttons - mobile only, positioned at bottom */}
+                <div className="md:hidden absolute bottom-8 left-4 right-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <button
+                      onClick={handleAppointmentClick}
+                      className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
+                    >
+                      {data.cta.book}
+                    </button>
+                    <button
+                      onClick={handleAboutClick}
+                      className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-lg font-medium transition-colors duration-300"
+                    >
+                      {data.cta.about}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
