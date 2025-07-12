@@ -16,7 +16,7 @@ export const latinicaData = {
     additionalText:
       "Bilo da se trenutno suočavate sa životnim izazovima, emocionalnom napetošću, osećajem praznine ili jednostavno želite da dublje upoznate sebe – na pravom ste mestu.",
     approach:
-      "Gestalt psihoterapija je terapija prisustva, svesnosti i autentičnog odnosa. Na vama i meni je da pronađemo zajednički način kako iskoristiti gestalt pristupe (ili tehnike) kako bismo došli do onog što je najbolje za vas. Cilj nije da vas menjam, već da vas pratim i podržim u potrazi za sopstvenim autentičnim putem.",
+      "Gestalt psihoterapija je terapija prisustva, svesnosti i autentičnog odnosa. Na vama i meni je da pronađemo zajednički način kako iskoristiti gestalt pristupe (ili tehnike) kako bismo došli do onog što je najbolje za vas. Cilj mi nije da vas menjam, već da vas pratim i podržim u potrazi za vašim autentičnim putem.",
     schemaInfo:
       "Osim Gestalt psihoterapije pravac u kome se trenutno usavršavam je Shema psihoterapija, integrativni psihoterapijski pristup koji objedinjuje elemente iz kognitivno-bihejvioralne terapije, psihodinamskog modela, Gestalt terapije i modela afektivne vezanosti.",
   },
@@ -86,7 +86,7 @@ export const latinicaData = {
     confidentiality:
       "Da li je ono što kažem poverljivo?\n\nDa, terapijski rad je strogo poverljiv i podložan etičkom kodeksu struke.",
     bigProblem:
-      "Da li moram imati 'veliki problem' da bih išao na terapiju?\n\nNe postoji mali veliki problem, postoje stvari koje nas muče, koje nam ometaju svakodnevnicu i to je već dovoljan razlog da se obratimo licu koje nam jedino, istinski, može pomoći a to je psihoterapeut.",
+      "Da li moram imati 'veliki problem' da bih išao na terapiju?\n\nNe postoji mali ili veliki problem – postoje stvari koje nas muče, koje nam ometaju svakodnevicu, i to je već dovoljan razlog da se obratimo osobi koja nam jedina, istinski, može pomoći, a to je psihoterapeut.",
     howToKnowTherapist:
       "Kako da znam ko je psihoterapeut?\n\nPsihoterapeut mora da ima završene studije psihologije ili medicine, zatim da je prošao specijalnu edukaciju iz psihoterapije (koja traje najmanje 4 godine), da je član stručnih udruženja i da radi pod supervizijom. Uvek možete proveriti licencu i članstvo u stručnim udruženjima.",
   },
