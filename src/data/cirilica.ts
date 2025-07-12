@@ -94,7 +94,7 @@ export const cirilicaData = {
   contact: {
     title: "Контакт / Заказивање",
     email: "Е-пошта: suza.psihoterapeut@gmail.com",
-    phone: "Телефон / Viber / WhatsApp: +381669000012",
+    phone: "Телефон / Viber / WhatsApp: +381 66 900 0012",
     workType: "Рад уживо или онлајн путем видео позива",
     copyText: "Копирај",
     promene: "Промене",
