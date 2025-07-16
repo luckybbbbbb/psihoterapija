@@ -93,7 +93,7 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Psihoterapija  - Suzana Mojsilović"
+        title="Psihoterapija Suzana Mojsilović"
         description="Gestalt i Schema psihoterapija sa licenciranim psihoterapeutom Suzana Mojsilović u Srbiji. Online i uživo sesije. Anksioznost, depresija, stres, odnosi."
         keywords="psihoterapija, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, psihoterapeut, srbija"
         language={language}
