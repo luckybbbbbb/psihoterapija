@@ -178,7 +178,7 @@ After implementing these changes:
 1. **Content Quality**: Ensure all content is unique and valuable
 2. **Page Speed**: Monitor and optimize loading times
 3. **Mobile Experience**: Ensure perfect mobile usability
-4. **Local SEO**: Optimize for local search in Novi Pazar
+4. **Local SEO**: Optimize for local search in Serbia
 5. **Backlinks**: Build quality backlinks from relevant sites
 
 ## Contact Information

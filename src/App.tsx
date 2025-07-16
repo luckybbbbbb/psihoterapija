@@ -93,9 +93,9 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Psihoterapija Novi Pazar - Suzana Mojsilović"
-        description="Gestalt i Schema psihoterapija sa licenciranim psihoterapeutom Suzana Mojsilović u Novom Pazaru. Online i uživo sesije. Anksioznost, depresija, stres, odnosi."
-        keywords="psihoterapija, novi pazar, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, psihoterapeut, srbija"
+        title="Psihoterapija  - Suzana Mojsilović"
+        description="Gestalt i Schema psihoterapija sa licenciranim psihoterapeutom Suzana Mojsilović u Srbiji. Online i uživo sesije. Anksioznost, depresija, stres, odnosi."
+        keywords="psihoterapija, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, psihoterapeut, srbija"
         language={language}
       />
       
@@ -276,7 +276,7 @@ function App() {
           <div className="relative h-[700px] sm:h-[600px]">
             <img
               src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-              alt="Mirna terapijska soba za psihoterapiju u Novom Pazaru"
+              alt="Mirna terapijska soba za psihoterapiju u Srbiji"
               className="w-full h-full object-cover filter blur-sm"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40">
@@ -355,7 +355,7 @@ function App() {
             <figure className="relative h-[400px] md:h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
               <img
                 src="/photos/psihoterapeut.jpg"
-                alt="Suzana Mojsilović - psihoterapeut u Novom Pazaru"
+                alt="Suzana Mojsilović - psihoterapeut u Srbiji"
                 className="w-full h-full object-contain bg-gray-100"
               />
             </figure>

@@ -12,9 +12,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Psihoterapija Novi Pazar - Suzana Mojsilović | Online i Uživo Sesije",
-  description = "Gestalt i Schema psihoterapija sa licenciranim psihoterapeutom Suzana Mojsilović u Novom Pazaru. Online i uživo sesije. Anksioznost, depresija, stres, odnosi.",
-  keywords = "psihoterapija, novi pazar, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, psihoterapeut, srbija",
+  title = "Psihoterapija  - Suzana Mojsilović | Online i Uživo Sesije",
+  description = "Gestalt i Schema psihoterapija sa licenciranim psihoterapeutom Suzana Mojsilović u Srbiji. Online i uživo sesije. Anksioznost, depresija, stres, odnosi.",
+  keywords = "psihoterapija, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, psihoterapeut, srbija",
   image = "https://www.tvoj-psihoterapeut.rs/photos/psihoterapeut.jpg",
   url = "https://www.tvoj-psihoterapeut.rs/",
   type = "website",
@@ -60,9 +60,9 @@ const SEO: React.FC<SEOProps> = ({
       {/* Additional SEO */}
       <meta name="author" content="Suzana Mojsilović" />
       <meta name="geo.region" content="RS" />
-      <meta name="geo.placename" content="Novi Pazar" />
-      <meta name="geo.position" content="43.1376;20.5156" />
-      <meta name="ICBM" content="43.1376, 20.5156" />
+      <meta name="geo.placename" content="Serbia" />
+      <meta name="geo.position" content="44.7866;20.4489" />
+      <meta name="ICBM" content="44.7866, 20.4489" />
       
       {/* Prevent indexing of hash URLs */}
       <meta name="fragment" content="!" />

@@ -1,6 +1,6 @@
-# Psihoterapija Novi Pazar - Suzana Mojsilović
+# Psihoterapija  - Suzana Mojsilović
 
-Website for psychotherapy services in Novi Pazar, Serbia.
+Website for psychotherapy services in Serbia.
 
 ## SEO Optimization
 
