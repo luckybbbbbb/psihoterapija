@@ -612,7 +612,7 @@ function App() {
                       </h3>
                       <button
                         onClick={() => {
-                          navigator.clipboard.writeText("+381669000012");
+                          navigator.clipboard.writeText("+381 66 9000 012");
                           alert("Broj telefona kopiran!");
                           trackEvent('phone_copy', 'contact', 'phone_number_copied');
                         }}
