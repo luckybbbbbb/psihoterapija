@@ -82,7 +82,7 @@ export const latinicaData = {
     title: "Česta pitanja",
     sessionDuration: "Koliko traje jedna seansa?\n\nSeansa traje 50 minuta.",
     sessionFrequency:
-      "Koliko često seseanse održavaju?\n\nObično jednom nedeljno, ali je moguć i drugačiji dogovor.",
+      "Koliko često se seanse održavaju?\n\nObično jednom nedeljno, ali je moguć i drugačiji dogovor.",
     confidentiality:
       "Da li je ono što kažem poverljivo?\n\nDa, terapijski rad je strogo poverljiv i podložan etičkom kodeksu struke.",
     bigProblem:
@@ -104,7 +104,7 @@ export const latinicaData = {
   },
 
   cta: {
-    book: "Zakažite prvu sesiju",
+    book: "Zakažite prvu seansu",
     about: "Saznajte više o meni"
   },
 };
