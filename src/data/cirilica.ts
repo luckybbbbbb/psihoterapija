@@ -3,7 +3,7 @@ export const cirilicaData = {
   navigation: {
     home: "Почетна",
     about: "О мени",
-    gestalt: "Гешталт",
+    gestalt: "Гешталт психотерапија",
     schema: "Шема психотерапија",
     contact: "Контакт",
     bookAppointment: "Закажи термин",

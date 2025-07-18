@@ -3,7 +3,7 @@ export const latinicaData = {
   navigation: {
     home: "Početna",
     about: "O meni",
-    gestalt: "Gestalt",
+    gestalt: "Gestalt psihoterapija",
     schema: "Shema psihoterapija",
     contact: "Kontakt",
     bookAppointment: "Zakaži termin",
