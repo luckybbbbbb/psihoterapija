@@ -12,8 +12,8 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Psihoterapija Suzana Mojsilović | Online i Uživo Sesije",
-  description = "Gestalt i Schema psihoterapija sa licenciranim psihoterapeutom Suzana Mojsilović u Srbiji. Online i uživo sesije. Anksioznost, depresija, stres, odnosi.",
+  title = "Psihoterapija Suzana Mojsilović | Online i Uživo Seanse",
+  description = "Gestalt i Schema psihoterapija sa licenciranim psihoterapeutom Suzana Mojsilović u Srbiji. Online i uživo seanse. Anksioznost, depresija, stres, odnosi.",
   keywords = "psihoterapija, gestalt terapija, schema terapija, online psihoterapija, anksioznost, depresija, stres, psiholog, psihoterapeut, srbija",
   image = "https://www.tvoj-psihoterapeut.rs/photos/psihoterapeut.jpg",
   url = "https://www.tvoj-psihoterapeut.rs/",
