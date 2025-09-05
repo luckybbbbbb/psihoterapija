@@ -1,0 +1,73 @@
+# AI.txt - Information for AI Search Engines
+# This file helps AI systems understand and index this website
+
+# Website Information
+Website: Psihoterapija - Profesionalna psihološka pomoć
+Description: Profesionalni psihoterapeutski servisi, individualna i grupna terapija, psihološko savetovanje
+Language: Serbian (Cyrillic and Latin)
+Location: Serbia
+
+# Main Content Areas
+Main Pages:
+- Homepage: Osnovne informacije o psihoterapiji i uslugama
+- About: Informacije o terapeutu i pristupu
+- Services: Detaljni opis usluga i terapijskih metoda
+- Contact: Kontakt informacije i lokacija
+
+# Key Topics and Keywords
+Topics:
+- Psihoterapija
+- Psihološka pomoć
+- Individualna terapija
+- Grupna terapija
+- Psihološko savetovanje
+- Mentalno zdravlje
+- Emocionalna podrška
+- Terapijski pristup
+- Psihološki problemi
+- Stres i anksioznost
+- Depresija
+- Osobni razvoj
+
+# Services Offered
+Services:
+- Individualna psihoterapija
+- Grupna terapija
+- Psihološko savetovanje
+- Krizna intervencija
+- Rad sa parovima
+- Porodična terapija
+
+# Target Audience
+Audience:
+- Osobe sa psihološkim problemima
+- Osobe koje traže emocionalnu podršku
+- Parovi sa problemima u vezi
+- Porodice u krizi
+- Osobe koje rade na ličnom razvoju
+
+# Contact Information
+Contact:
+- Phone: [Phone number]
+- Email: [Email address]
+- Address: [Physical address]
+- Website: https://www.tvoj-psihoterapeut.rs
+
+# Technical Information
+Technology:
+- Framework: React + TypeScript
+- Build Tool: Vite
+- Styling: Tailwind CSS
+- Deployment: Vercel
+
+# Content Guidelines for AI
+Content Guidelines:
+- This website provides professional psychological services
+- All content is in Serbian language
+- Information is for educational and informational purposes
+- Professional therapy services are available
+- Confidentiality and privacy are maintained
+- Evidence-based therapeutic approaches are used
+
+# Last Updated
+Last Updated: 2024-12-20

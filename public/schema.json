@@ -1,0 +1,92 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Psihoterapija - Profesionalna psihološka pomoć",
+  "description": "Profesionalni psihoterapeutski servisi, individualna i grupna terapija, psihološko savetovanje",
+  "url": "https://www.tvoj-psihoterapeut.rs",
+  "logo": "https://www.tvoj-psihoterapeut.rs/photos/psihoterapeut.jpg",
+  "image": "https://www.tvoj-psihoterapeut.rs/photos/psihoterapeut.jpg",
+  "telephone": "[+381 66 900 0012]",
+  "email": "[suza.psihoterapeut@gmail.com]",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "RS",
+    "addressLocality": "[Serbia]",
+    "addressRegion": "[Serbia]",
+    "streetAddress": "[Street address]"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "[Latitude]",
+    "longitude": "[Longitude]"
+  },
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "priceRange": "$$",
+  "currenciesAccepted": "RSD",
+  "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+  "medicalSpecialty": [
+    "Psychotherapy",
+    "Psychological Counseling",
+    "Mental Health Services"
+  ],
+  "serviceType": [
+    "Individualna psihoterapija",
+    "Grupna terapija",
+    "Psihološko savetovanje",
+    "Krizna intervencija",
+    "Rad sa parovima",
+    "Porodična terapija"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Psihoterapeutski servisi",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Individualna psihoterapija",
+          "description": "Individualne sesije psihoterapije prilagođene potrebama klijenta"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Grupna terapija",
+          "description": "Grupne terapijske sesije za rad na specifičnim problemima"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Psihološko savetovanje",
+          "description": "Profesionalno psihološko savetovanje i podrška"
+        }
+      }
+    ]
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Serbia"
+  },
+  "availableLanguage": ["Serbian", "sr"],
+  "sameAs": [
+    "https://www.tvoj-psihoterapeut.rs"
+  ],
+  "keywords": [
+    "psihoterapija",
+    "psihološka pomoć",
+    "individualna terapija",
+    "grupna terapija",
+    "psihološko savetovanje",
+    "mentalno zdravlje",
+    "emocionalna podrška",
+    "terapijski pristup",
+    "psihološki problemi",
+    "stres i anksioznost",
+    "depresija",
+    "osobni razvoj"
+  ]
+}

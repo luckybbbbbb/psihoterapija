@@ -1,0 +1,26 @@
+# humans.txt - Information about the people behind this website
+
+# Team
+Psihoterapeut: Profesionalni psihoterapeut
+Contact: [Email address]
+Location: Serbia
+
+# Technology
+Frontend: React + TypeScript
+Build Tool: Vite
+Styling: Tailwind CSS
+Deployment: Vercel
+
+# Services
+- Individualna psihoterapija
+- Grupna terapija  
+- Psihološko savetovanje
+- Krizna intervencija
+- Rad sa parovima
+- Porodična terapija
+
+# Language
+Primary Language: Serbian (Cyrillic and Latin)
+
+# Last Updated
+Last Updated: 2024-12-20
