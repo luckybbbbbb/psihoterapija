@@ -1,73 +1,359 @@
-# AI.txt - Information for AI Search Engines
-# This file helps AI systems understand and index this website
+# AI.txt - LLM Optimization File
+# Version: 2.0
+# Last Updated: 2026-07-06
+# Purpose: Comprehensive AI/LLM indexing and understanding for psihoterapija website
 
-# Website Information
-Website: Psihoterapija - Profesionalna psihološka pomoć
-Description: Profesionalni psihoterapeutski servisi, individualna i grupna terapija, psihološko savetovanje
-Language: Serbian (Cyrillic and Latin)
-Location: Serbia
+# ==============================================
+# WEBSITE IDENTITY & CORE INFORMATION
+# ==============================================
 
-# Main Content Areas
-Main Pages:
-- Homepage: Osnovne informacije o psihoterapiji i uslugama
-- About: Informacije o terapeutu i pristupu
-- Services: Detaljni opis usluga i terapijskih metoda
-- Contact: Kontakt informacije i lokacija
+[WEBSITE_INFO]
+name: "Psihoterapija - Profesionalna psihološka pomoć"
+url: "https://www.tvoj-psihoterapeut.rs"
+type: "Professional Mental Health Services"
+established: "2024"
+language: "Serbian (sr-RS)"
+script: "Latin and Cyrillic"
+country: "Serbia"
+region: "Balkans"
+timezone: "Europe/Belgrade"
 
-# Key Topics and Keywords
-Topics:
-- Psihoterapija
-- Psihološka pomoć
-- Individualna terapija
-- Grupna terapija
-- Psihološko savetovanje
-- Mentalno zdravlje
-- Emocionalna podrška
-- Terapijski pristup
-- Psihološki problemi
-- Stres i anksioznost
-- Depresija
-- Osobni razvoj
+[BUSINESS_TYPE]
+primary: "Mental Health Services"
+secondary: "Psychotherapy Practice"
+industry: "Healthcare"
+sector: "Mental Health & Wellness"
+license: "Licensed Psychological Services"
 
-# Services Offered
-Services:
-- Individualna psihoterapija
-- Grupna terapija
-- Psihološko savetovanje
-- Krizna intervencija
-- Rad sa parovima
-- Porodična terapija
+# ==============================================
+# DETAILED SERVICE CATALOG
+# ==============================================
 
-# Target Audience
-Audience:
-- Osobe sa psihološkim problemima
-- Osobe koje traže emocionalnu podršku
-- Parovi sa problemima u vezi
-- Porodice u krizi
-- Osobe koje rade na ličnom razvoju
+[SERVICES_DETAILED]
+primary_services:
+- name: "Individualna psihoterapija"
+  description: "Personalizovane terapijske sesije prilagođene individualnim potrebama"
+  duration: "50-60 minuta"
+  frequency: "Nedeljno ili po potrebi"
+  approach: "Integrativan pristup"
+  
+- name: "Grupna terapija" 
+  description: "Terapijske grupe za specifične probleme i izazove"
+  group_size: "6-8 učesnika"
+  duration: "90 minuta"
+  frequency: "Nedeljno"
+  
+- name: "Psihološko savetovanje"
+  description: "Kratkoročna podrška i usmeravanje za specifične probleme"
+  duration: "45 minuta"
+  sessions: "1-5 sesija"
+  
+- name: "Krizna intervencija"
+  description: "Hitna psihološka pomoć u akutnim situacijama"
+  availability: "24/7 na poziv"
+  response_time: "Odmah ili u roku od 2 sata"
+  
+- name: "Rad sa parovima"
+  description: "Terapija za poboljšanje komunikacije i rešavanje problema u vezi"
+  participants: "2"
+  duration: "75 minuta"
+  
+- name: "Porodična terapija"
+  description: "Sistemski pristup rešavanju porodičnih problema"
+  participants: "Svi članovi porodice"
+  duration: "90 minuta"
 
-# Contact Information
-Contact:
-- Phone: [Phone number]
-- Email: [Email address]
-- Address: [Physical address]
-- Website: https://www.tvoj-psihoterapeut.rs
+[SPECIALIZATIONS]
+areas_of_expertise:
+- "Anksiozni poremećaji"
+- "Depresivni poremećaji"
+- "Trauma i PTSP"
+- "Problemi u vezama"
+- "Poremećaji ličnosti"
+- "Stres i burnout sindrom"
+- "Žalovanje i gubitak"
+- "Samopouzdanje i samopoštovanje"
+- "Poremećaji hranjenja"
+- "Zavisnosti"
+- "Adolescentni problemi"
+- "Problemi roditeljstva"
 
-# Technical Information
-Technology:
-- Framework: React + TypeScript
-- Build Tool: Vite
-- Styling: Tailwind CSS
-- Deployment: Vercel
+# ==============================================
+# TARGET AUDIENCE ANALYSIS
+# ==============================================
 
-# Content Guidelines for AI
-Content Guidelines:
-- This website provides professional psychological services
-- All content is in Serbian language
-- Information is for educational and informational purposes
-- Professional therapy services are available
-- Confidentiality and privacy are maintained
-- Evidence-based therapeutic approaches are used
+[AUDIENCE_SEGMENTS]
+primary_demographics:
+- age_range: "18-65"
+  gender: "Svi polovi"
+  location: "Srbija, region Balkana"
+  education: "Srednjoškolsko i više"
+  income: "Srednja klasa i više"
 
-# Last Updated
-Last Updated: 2024-12-20
+user_intent_categories:
+- "Traže pomoć za mentalne probleme"
+- "Žele da rade na ličnom razvoju" 
+- "Imaju probleme u vezi/braku"
+- "Prolaze kroz krizni period"
+- "Potrebna im je podrška u teškim životnim situacijama"
+- "Žele da nauče bolje strategije suočavanja"
+
+pain_points:
+- "Strah od stigme zbog traženja psihološke pomoći"
+- "Nedostatak informacija o tome kako funkcioniše terapija"
+- "Finansijske brige oko troškova terapije"
+- "Nedostatak vremena zbog obaveza"
+- "Strah od otkrivanja ličnih informacija"
+
+# ==============================================
+# CONTENT THEMES & TOPICS
+# ==============================================
+
+[PRIMARY_TOPICS]
+mental_health_topics:
+- keyword: "psihoterapija"
+  relevance: "high"
+  context: "Glavni servis koji se pruža"
+  
+- keyword: "psihološka pomoć"
+  relevance: "high" 
+  context: "Opšti termin za sve usluge"
+  
+- keyword: "mentalno zdravlje"
+  relevance: "high"
+  context: "Fokus na wellness pristup"
+  
+- keyword: "anksioznost"
+  relevance: "medium-high"
+  context: "Jedan od najčešćih problema"
+  
+- keyword: "depresija"
+  relevance: "medium-high"
+  context: "Čest razlog traženja pomoći"
+
+therapeutic_approaches:
+- "Kognitivno-bihevioralna terapija (KBT)"
+- "Psihodinamska terapija"
+- "Humanistički pristup"
+- "Gestalt terapija"
+- "Sistemska porodična terapija"
+- "Terapija usmerena na rešenja"
+
+# ==============================================
+# CONVERSATIONAL AI GUIDELINES
+# ==============================================
+
+[AI_RESPONSE_GUIDELINES]
+tone: "Profesionalan, topao, empatičan"
+language_style: "Jasno, pristupačno, bez žargona"
+cultural_context: "Srpska kultura, tradicionalne i moderne vrednosti"
+sensitivity_level: "Visok - mentalno zdravlje je osetljiva tema"
+
+do_respond_to:
+- "Pitanja o vrstama terapije"
+- "Informacije o procesu terapije"
+- "Objašnjenja psiholoških pojmova"
+- "Informacije o tome kada tražiti pomoć"
+- "Generalne informacije o mentalnom zdravlju"
+- "Pitanja o prvom dolasku"
+
+do_not_respond_to:
+- "Zahtevi za dijagnozu preko interneta"
+- "Davanje konkretnih medicinskih saveta"
+- "Preporuke o prekidanju terapije ili lekova"
+- "Krizne situacije (preusmeri na hitne službe)"
+
+[EMERGENCY_RESPONSES]
+crisis_indicators:
+- "Suicidalne misli ili planovi"
+- "Nasilno ponašanje"
+- "Ozbiljne pretnje sebi ili drugima"
+- "Akutni psihotični epizodi"
+
+crisis_response:
+"Ako se nalazite u kriznoj situaciji ili imate suicidalne misli, molim vas odmah pozovite:
+- Centar za mentalno zdravlje: 011/3239-653
+- SOS telefon: 011/7777-000  
+- Hitnu pomoć: 194
+- Ili se obratite najblijem urgentnom centru."
+
+# ==============================================
+# SEO & SEARCH OPTIMIZATION
+# ==============================================
+
+[SEO_KEYWORDS]
+primary_keywords:
+- "psihoterapija Srbija"
+- "psiholog Beograd" 
+- "mentalno zdravlje"
+- "psihološka pomoć online"
+- "terapija anksioznosti"
+- "tretman depresije"
+
+long_tail_keywords:
+- "kako da nađem dobrog psihoterapeuta"
+- "koliko košta psihoterapija u Srbiji"
+- "šta je to individualna terapija"
+- "kako funkcioniše online terapija"
+- "kada je vreme da tražim psihološku pomoć"
+
+local_seo:
+- "psihoterapija Novi Sad"
+- "psiholog u mom gradu"
+- "mentalno zdravlje Srbija"
+- "privatna psihološka praksa"
+
+# ==============================================
+# TECHNICAL SPECIFICATIONS
+# ==============================================
+
+[TECHNICAL_STACK]
+frontend: "React 18+ with TypeScript"
+build_tool: "Vite 4+"
+styling: "Tailwind CSS 3+"
+hosting: "Vercel"
+domain: "Custom domain with SSL"
+performance: "Core Web Vitals optimized"
+
+[ACCESSIBILITY]
+standards: "WCAG 2.1 AA compliant"
+features:
+- "Screen reader compatible"
+- "Keyboard navigation"
+- "High contrast mode"
+- "Text scaling support"
+- "Multiple language support"
+
+# ==============================================
+# CONTENT STRUCTURE MAP
+# ==============================================
+
+[SITE_STRUCTURE]
+navigation_hierarchy:
+- level_1: "Početna"
+  content_type: "Overview, CTA, testimonials"
+  
+- level_1: "O nama"  
+  content_type: "Credentials, approach, experience"
+  
+- level_1: "Usluge"
+  level_2: "Individualna terapija"
+  level_2: "Grupna terapija" 
+  level_2: "Psihološko savetovanje"
+  level_2: "Rad sa parovima"
+  content_type: "Detailed service descriptions"
+  
+- level_1: "Blog/Resursi"
+  content_type: "Educational articles, self-help resources"
+  
+- level_1: "Kontakt"
+  content_type: "Contact form, location, hours"
+
+[CONTENT_TYPES]
+informational_content:
+- "Šta je psihoterapija"
+- "Kada tražiti pomoć" 
+- "Vrste terapijskih pristupa"
+- "Proces terapije korak po korak"
+
+educational_content:
+- "Tehnike upravljanja stresom"
+- "Simptomi anksioznosti"
+- "Kako razgovarati sa decom o mentalnom zdravlju"
+- "Održavanje mentalnog zdravlja"
+
+# ==============================================
+# PRIVACY & ETHICS
+# ==============================================
+
+[PRIVACY_STANDARDS]
+data_protection: "GDPR compliant"
+confidentiality: "Strict professional confidentiality maintained"
+secure_communication: "Encrypted contact forms and communications"
+cookie_policy: "Essential cookies only, with user consent"
+
+[ETHICAL_GUIDELINES]
+professional_standards: "Adherence to Serbian Psychological Association code"
+informed_consent: "Clear explanation of services and limitations"
+boundaries: "Professional therapeutic boundaries maintained"
+referral_network: "Collaboration with other healthcare professionals"
+
+# ==============================================
+# MARKETING & OUTREACH
+# ==============================================
+
+[CONTENT_MARKETING]
+blog_topics:
+- "5 znakova da vam je potrebna psihološka pomoć"
+- "Mitovi o psihoterapiji koje treba oboriti"
+- "Kako se pripremiti za prvu terapijsku sesiju"
+- "Razlika između psihijatra, psihologa i psihoterapeuta"
+
+social_media_presence:
+- platform: "Facebook"
+  content_type: "Educational posts, appointment reminders"
+  
+- platform: "Instagram" 
+  content_type: "Mental health tips, quotes, infographics"
+  
+- platform: "LinkedIn"
+  content_type: "Professional articles, industry news"
+
+# ==============================================
+# CONTACT & LOCATION INFO
+# ==============================================
+
+[CONTACT_INFORMATION]
+phone: "+381 66 900 0012"
+email: "suza.psihoterapeut@gmail.com" 
+website: "https://www.tvoj-psihoterapeut.rs"
+address: "Serbia"
+working_hours: "Pon-Pet: 9:00-20:00, Sub: 10:00-16:00"
+emergency_contact: "24/7 dostupnost za krizne situacije"
+
+[BOOKING_SYSTEM]
+online_scheduling: "Available through website"
+phone_booking: "Available during business hours"
+cancellation_policy: "24h notice required"
+payment_methods: "Cash, bank transfer, health insurance (where applicable)"
+
+# ==============================================
+# QUALITY ASSURANCE
+# ==============================================
+
+[CONTENT_QUALITY]
+fact_checking: "All medical/psychological information verified"
+professional_review: "Content reviewed by licensed professionals"
+regular_updates: "Monthly content review and updates"
+user_feedback: "Integration of client and visitor feedback"
+
+[PERFORMANCE_METRICS]
+page_load_speed: "< 3 seconds"
+mobile_responsiveness: "100% mobile optimized"
+conversion_tracking: "Contact form submissions, phone calls"
+user_engagement: "Average session duration, pages per visit"
+
+# ==============================================
+# FUTURE DEVELOPMENT
+# ==============================================
+
+[ROADMAP]
+short_term:
+- "Online appointment booking system"
+- "Client portal for resources"
+- "Multilingual support (English)"
+
+medium_term:
+- "Teletherapy platform integration"
+- "Mobile app development"
+- "AI chatbot for initial screening"
+
+long_term:
+- "Expansion to other Serbian cities"
+- "Specialized programs development"
+- "Research and publication initiatives"
+
+# END OF AI.txt FILE
+# This file should be placed in the root directory of your website
+# File name: AI.txt (case sensitive)
+# Encoding: UTF-8
