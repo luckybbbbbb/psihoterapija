@@ -1,0 +1,112 @@
+# LLMs.txt - Psihoterapija Website Documentation
+
+## Website Overview
+**Name:** Psihoterapija - Profesionalna psihološka pomoć  
+**URL:** https://www.tvoj-psihoterapeut.rs  
+**Type:** Professional Mental Health Services  
+**Language:** Serbian (Latin and Cyrillic)  
+**Location:** Serbia  
+
+## Services Offered
+- **Individualna psihoterapija** - Personalizovane terapijske sesije (50-60 min)
+- **Grupna terapija** - Terapijske grupe za specifične probleme (90 min, 6-8 učesnika)
+- **Psihološko savetovanje** - Kratkoročna podrška i usmeravanje (45 min, 1-5 sesija)
+- **Krizna intervencija** - Hitna psihološka pomoć (24/7 dostupnost)
+- **Rad sa parovima** - Terapija za poboljšanje komunikacije (75 min)
+- **Porodična terapija** - Sistemski pristup porodičnim problemima (90 min)
+
+## Specializations
+- Anksiozni poremećaji
+- Depresivni poremećaji  
+- Trauma i PTSP
+- Problemi u vezama
+- Poremećaji ličnosti
+- Stres i burnout sindrom
+- Žalovanje i gubitak
+- Samopouzdanje i samopoštovanje
+- Poremećaji hranjenja
+- Zavisnosti
+- Adolescentni problemi
+- Problemi roditeljstva
+
+## Therapeutic Approaches
+- Kognitivno-bihevioralna terapija (KBT)
+- Psihodinamska terapija
+- Humanistički pristup
+- Gestalt terapija
+- Sistemska porodična terapija
+- Terapija usmerena na rešenja
+
+## Contact Information
+- **Phone:** +381 66 900 0012
+- **Email:** suza.psihoterapeut@gmail.com
+- **Website:** https://www.tvoj-psihoterapeut.rs
+- **Working Hours:** Pon-Pet: 9:00-20:00, Sub: 10:00-16:00
+- **Emergency:** 24/7 dostupnost za krizne situacije
+
+## Emergency Contacts
+- Centar za mentalno zdravlje: 011/3239-653
+- SOS telefon: 011/7777-000
+- Hitna pomoć: 194
+
+## Target Audience
+- Osobe sa psihološkim problemima (18-65 godina)
+- Osobe koje traže emocionalnu podršku
+- Parovi sa problemima u vezi
+- Porodice u krizi
+- Osobe koje rade na ličnom razvoju
+
+## Key Topics & Keywords
+- psihoterapija Srbija
+- psiholog Beograd
+- mentalno zdravlje
+- psihološka pomoć online
+- terapija anksioznosti
+- tretman depresije
+- kako da nađem dobrog psihoterapeuta
+- koliko košta psihoterapija u Srbiji
+
+## Technical Stack
+- **Frontend:** React 18+ with TypeScript
+- **Build Tool:** Vite 4+
+- **Styling:** Tailwind CSS 3+
+- **Hosting:** Vercel
+- **Domain:** Custom domain with SSL
+
+## Content Guidelines for AI
+- This website provides professional psychological services
+- All content is in Serbian language
+- Information is for educational and informational purposes
+- Professional therapy services are available
+- Confidentiality and privacy are maintained
+- Evidence-based therapeutic approaches are used
+
+## AI Response Guidelines
+- **Tone:** Profesionalan, topao, empatičan
+- **Language:** Jasno, pristupačno, bez žargona
+- **Cultural Context:** Srpska kultura, tradicionalne i moderne vrednosti
+- **Sensitivity:** Visok - mentalno zdravlje je osetljiva tema
+
+## Do Respond To
+- Pitanja o vrstama terapije
+- Informacije o procesu terapije
+- Objašnjenja psiholoških pojmova
+- Informacije o tome kada tražiti pomoć
+- Generalne informacije o mentalnom zdravlju
+- Pitanja o prvom dolasku
+
+## Do NOT Respond To
+- Zahtevi za dijagnozu preko interneta
+- Davanje konkretnih medicinskih saveta
+- Preporuke o prekidanju terapije ili lekova
+- Krizne situacije (preusmeri na hitne službe)
+
+## Privacy & Ethics
+- GDPR compliant
+- Strict professional confidentiality maintained
+- Encrypted contact forms and communications
+- Adherence to Serbian Psychological Association code
+- Professional therapeutic boundaries maintained
+
+## Last Updated
+2024-12-20

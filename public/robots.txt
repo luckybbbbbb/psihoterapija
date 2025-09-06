@@ -7,6 +7,7 @@ Sitemap: https://www.tvoj-psihoterapeut.rs/sitemap.xml
 # AI Search Engine Information
 # AI.txt file for better AI indexing
 Allow: /ai.txt
+Allow: /llms.txt
 Allow: /humans.txt
 Allow: /schema.json
 
