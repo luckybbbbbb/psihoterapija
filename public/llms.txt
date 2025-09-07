@@ -1,4 +1,6 @@
 # LLMs.txt - Psihoterapija Website Documentation
+# Content-Type: text/plain; charset=utf-8
+# Encoding: UTF-8
 
 ## Website Overview
 **Name:** Psihoterapija - Profesionalna psihološka pomoć  
