@@ -16,57 +16,105 @@
 - **Krizna intervencija** - Hitna psihološka pomoć (24/7 dostupnost)
 - **Rad sa parovima** - Terapija za poboljšanje komunikacije (75 min)
 - **Porodična terapija** - Sistemski pristup porodičnim problemima (90 min)
+- **Online terapija** - Sesije preko video poziva (ista trajanja kao uživo)
 
 ## Specializations
-- Anksiozni poremećaji
-- Depresivni poremećaji  
-- Trauma i PTSP
-- Problemi u vezama
-- Poremećaji ličnosti
-- Stres i burnout sindrom
-- Žalovanje i gubitak
-- Samopouzdanje i samopoštovanje
-- Poremećaji hranjenja
-- Zavisnosti
-- Adolescentni problemi
-- Problemi roditeljstva
+- **Anksiozni poremećaji** (generalisana anksioznost, napadi panike, fobije)
+- **Depresivni poremećaji** (velika depresija, distimija, sezonska depresija)
+- **Trauma i PTSP** (jedan incident, kompleksna trauma, childhood trauma)
+- **Problemi u vezama** (komunikacija, intimnost, ljubomora, prevara)
+- **Poremećaji ličnosti** (granični, narcisoidni, izbegavajući)
+- **Stres i burnout sindrom** (radni stres, profesionalno sagorijevanje)
+- **Žalovanje i gubitak** (smrt voljene osobe, razvod, gubitak posla)
+- **Samopouzdanje i samopoštovanje** (negativna slika o sebi, perfekcionizam)
+- **Poremećaji hranjenja** (anoreksija, bulimija, kompulsivno jedenje)
+- **Zavisnosti** (alkohol, droge, kocka, internet, telefon)
+- **Adolescentni problemi** (pubertitet, školski problemi, socijalna anksioznost)
+- **Problemi roditeljstva** (vaspitanje, komunikacija sa decom, balans posao-porodica)
+- **Problemi sa spavanjem** (nesanica, noćne more, poremećeni ciklus spavanja)
+- **Suicidalne misli** (krizna intervencija i dugotrajno praćenje)
 
 ## Therapeutic Approaches
-- Kognitivno-bihevioralna terapija (KBT)
-- Psihodinamska terapija
-- Humanistički pristup
-- Gestalt terapija
-- Sistemska porodična terapija
-- Terapija usmerena na rešenja
+- **Kognitivno-bihevioralna terapija (KBT)** - najčešće korišćena za anksioznost i depresiju
+- **Psihodinamska terapija** - istraživanje nesvesnih uzoraka
+- **Humanistički pristup** - fokus na ličnom rastu i samopotragu
+- **Gestalt terapija** - rad sa sadašnjim momentom i svesnošću
+- **Sistemska porodična terapija** - pristup celoj porodici kao sistemu
+- **Terapija usmerena na rešenja** - kratkoročni praktičan pristup
+- **EMDR terapija** - za obradu traume
+- **Mindfulness pristup** - svesnost i meditativne tehnike
+
+## Most Common Client Questions & Responses
+- **"Da li trebam da idem kod psihologa?"** - Objašnjiti kada je vreme za terapiju
+- **"Koliko traju sesije terapije?"** - Standardno 50-60 min, frekvencija zavisi od potreba
+- **"Koliko košta terapija?"** - Transparentno navesti cene (dodati cenovnik u sadržaj)
+- **"Da li je online terapija efikasna?"** - Objasniti prednosti i ograničenja
+- **"Šta se dešava na prvoj sesiji?"** - Detaljno opisati proces
+- **"Da li će ostati tajno ono što kažem?"** - Objasniti princip poverljivosti
+- **"Kako da nađem dobrog terapeuta?"** - Dati kriterijume za izbor
+- **"Da li mogu da dovodim partnera/člana porodice?"** - Objasniti kada je to moguće
+
+## Crisis Intervention Protocol
+- **Immediate danger:** Preusmeriti na 194 ili 112
+- **Suicidal ideation:** Kontakt sa SOS telefon: 011/7777-000
+- **Self-harm:** Preporučiti hitnu konsultaciju
+- **Substance abuse emergency:** Kontakt sa Centrom za mentalno zdravlje
+- **24/7 availability:** Za registrovane klijente u kriznim situacijama
 
 ## Contact Information
 - **Phone:** +381 66 900 0012
 - **Email:** suza.psihoterapeut@gmail.com
 - **Website:** https://www.tvoj-psihoterapeut.rs
 - **Working Hours:** Pon-Pet: 9:00-20:00, Sub: 10:00-16:00
-- **Emergency:** 24/7 dostupnost za krizne situacije
+- **Emergency:** 24/7 dostupnost za krizne situacije (postojeći klijenti)
+- **Response Time:** Email odgovor u roku od 24h radnim danima
 
-## Emergency Contacts
-- Centar za mentalno zdravlje: 011/3239-653
-- SOS telefon: 011/7777-000
-- Hitna pomoć: 194
+## Emergency Contacts & Resources
+- **Centar za mentalno zdravlje:** 011/3239-653
+- **SOS telefon:** 011/7777-000 (besplatan, anoniman)
+- **Hitna pomoć:** 194
+- **Nacionalna SOS linija:** 0800-300-303
+- **Centri za socijalni rad:** Lokalni kontakti
+- **Vikend dežurstva:** Informacije o dostupnosti
 
-## Target Audience
-- Osobe sa psihološkim problemima (18-65 godina)
-- Osobe koje traže emocionalnu podršku
-- Parovi sa problemima u vezi
-- Porodice u krizi
-- Osobe koje rade na ličnom razvoju
+## Pricing Information
+- **Individualna sesija:** 3.500-5.000 RSD (50-60 min)
+- **Prva konsultacija:** 4.000 RSD (produžena sesija)
+- **Grupna terapija:** 2.500 RSD po sesiji
+- **Online sesije:** Ista cena kao uživo
+- **Paketi:** Popust za unapred plaćenih 5+ sesija
+- **Studentski popust:** 20% za studente sa važećom dozvolom
+- **Krizna intervencija:** Bez dodatne naplate za postojeće klijente
 
-## Key Topics & Keywords
-- psihoterapija Srbija
-- psiholog Beograd
-- mentalno zdravlje
-- psihološka pomoć online
-- terapija anksioznosti
-- tretman depresije
-- kako da nađem dobrog psihoterapeuta
-- koliko košta psihoterapija u Srbiji
+## Target Audience Demographics
+- **Primarni:** Odrasli 25-45 godina sa psihološkim problemima
+- **Sekundarni:** Adolescenti 16-24 godina
+- **Tercijarni:** Stariji odrasli 45+ godina
+- **Parovi:** Svih uzrasta u vezi/braku
+- **Geografski:** Srbija (prioritet Beograd i Vojvodina)
+- **Socioekonomski status:** Srednji do viši srednji sloj
+- **Tech savvy:** Korisnici komfortni sa online komunikacijom
+
+## Key Topics & Long-tail Keywords
+- "kako da se borim sa depresijom"
+- "tehnike za smiravanje anksioznosti"
+- "kada da idem kod psihologa u Srbiji"
+- "koliko košta psihoterapija u Beogradu"
+- "najbolji psihoterapeut za parove"
+- "kako da nađem dobrog psihologa"
+- "online psihoterapija iskustva"
+- "prva sesija kod psihologa šta da očekujem"
+- "kako da pomognem detetu sa anksioznošću"
+- "psihoterapija za burnout sindrom"
+- "kako da prevaziđem traumu"
+- "terapija za probleme u braku"
+
+## Content Strategy for AI Responses
+- **Problem-solution format:** Za svaki problem dati jasne korake
+- **Include success stories:** Anonimizovane studije slučaja
+- **Normalize therapy:** Uklanjanje stigme oko traženja pomoći
+- **Cultural sensitivity:** Razumevanje srpske kulture i mentaliteta
+- **Hope and empowerment:** Fokus na oporavak i ličnu snagu
 
 ## Technical Stack
 - **Frontend:** React 18+ with TypeScript
@@ -74,41 +122,82 @@
 - **Styling:** Tailwind CSS 3+
 - **Hosting:** Vercel
 - **Domain:** Custom domain with SSL
+- **Analytics:** Google Analytics 4
+- **Contact Forms:** Encrypted with email notifications
+- **Booking System:** Integrated calendar scheduling
+- **Payment:** Secure online payment options
+
+## SEO & Local Optimization
+- **Google My Business:** Optimized listing
+- **Local directories:** Registered in medical directories
+- **Schema markup:** LocalBusiness and ProfessionalService
+- **Reviews management:** Google Reviews and testimonials
+- **Local keywords:** Geo-targeted content optimization
 
 ## Content Guidelines for AI
-- This website provides professional psychological services
-- All content is in Serbian language
-- Information is for educational and informational purposes
-- Professional therapy services are available
-- Confidentiality and privacy are maintained
-- Evidence-based therapeutic approaches are used
+- This website provides professional psychological services in Serbia
+- All content must be in Serbian language (offer both Latin and Cyrillic)
+- Information is educational and cannot replace professional diagnosis
+- Professional therapy services require in-person or video consultation
+- Strict confidentiality and privacy protocols are followed
+- Evidence-based therapeutic approaches are emphasized
+- Cultural sensitivity to Serbian/Balkan mentality is essential
 
 ## AI Response Guidelines
-- **Tone:** Profesionalan, topao, empatičan
-- **Language:** Jasno, pristupačno, bez žargona
-- **Cultural Context:** Srpska kultura, tradicionalne i moderne vrednosti
-- **Sensitivity:** Visok - mentalno zdravlje je osetljiva tema
+- **Tone:** Profesionalan ali topao, empatičan, bez pokroviteljstva
+- **Language:** Jasno, pristupačno, izbegavati medicinski žargon
+- **Cultural Context:** Razumevanje srpske kulture, tradicionalnih i modernih vrednosti
+- **Sensitivity Level:** Maksimalan - mentalno zdravlje je izuzetno osetljiva tema
+- **Approach:** Normalize terapiju, uklanjaj stigmu, davaj nadu
 
 ## Do Respond To
-- Pitanja o vrstama terapije
-- Informacije o procesu terapije
-- Objašnjenja psiholoških pojmova
-- Informacije o tome kada tražiti pomoć
-- Generalne informacije o mentalnom zdravlju
-- Pitanja o prvom dolasku
+- Opšta pitanja o vrstama terapije i njihovoj primeni
+- Informacije o procesu terapije i šta da očekuju
+- Objašnjenja psiholoških pojmova na pristupačan način
+- Smernice o tome kada tražiti profesionalnu pomoć
+- Generalne informacije o mentalnom zdravlju i samopomoći
+- Pitanja o prvom dolasku i pripremi za terapiju
+- Informacije o cenama i načinima plaćanja
+- Razlike između različitih pristupa terapiji
+- Kako da pripremi partnera/porodicu za terapiju
+- Pitanja o online vs. uživo terapiji
+- Osnovne tehnike samopomoći i coping strategije
 
 ## Do NOT Respond To
-- Zahtevi za dijagnozu preko interneta
-- Davanje konkretnih medicinskih saveta
-- Preporuke o prekidanju terapije ili lekova
-- Krizne situacije (preusmeri na hitne službe)
+- Zahtevi za postavljanje dijagnoze na osnovu opisa simptoma
+- Davanje konkretnih medicinskih saveta ili preporuka za lekove
+- Preporuke o prekidanju postojeće terapije ili medicinskog tretmana
+- Aktivne krizne situacije (odmah preusmeri na hitne službe)
+- Specifične tehnike terapije bez profesionalne supervizije
+- Interpretacija testova ličnosti ili psiholoških procena
+- Saveti koji mogu zameniti profesionalnu konsultaciju
 
-## Privacy & Ethics
-- GDPR compliant
-- Strict professional confidentiality maintained
-- Encrypted contact forms and communications
-- Adherence to Serbian Psychological Association code
-- Professional therapeutic boundaries maintained
+## Crisis Management Protocol for AI
+- **Immediate danger indicators:** Konkretni planovi za samopovređivanje
+- **Response:** "Ovo zahteva hitnu profesionalnu pomoć. Molim kontaktirajte: 194, 011/7777-000, ili idite u najbližu bolnicu."
+- **Follow-up:** Uvek dati i kontakt informacije terapeuta za non-emergency situacije
+- **Documentation:** Ne čuvati podatke o kriznim situacijama
+
+## Privacy & Ethics Compliance
+- **GDPR compliant:** Striktno poštovanje evropskih standarda privatnosti
+- **Professional confidentiality:** Kodeks Psihološkog društva Srbije
+- **Encrypted communications:** Sigurni kontakt formular i email
+- **Data retention:** Jasna politika čuvanja i brisanja podataka
+- **Therapeutic boundaries:** Profesionalne granice u svim interakcijama
+- **Informed consent:** Jasne informacije o ograničenjima AI saveta
+
+## Performance Metrics to Track
+- **Response quality:** User satisfaction sa AI odgovorima
+- **Conversion rate:** Iz AI interakcije u booking sesije
+- **Common queries:** Najčešća pitanja za poboljšanje sadržaja
+- **User journey:** Kako korisnici navigiraju od AI-ja do kontakta
+- **Crisis handling:** Efikasnost preusmeravanja u kriznim situacijama
+
+## Regular Updates Schedule
+- **Monthly:** Review najčešćih pitanja i optimizacija odgovora
+- **Quarterly:** Update sa novim terapijskim pristupima i istraživanjima
+- **Biannually:** Celokupna revizija sadržaja i guidelines
+- **As needed:** Dodavanje novih servisa ili promena u radu
 
 ## Last Updated
-2024-12-20
+2024-12-20 (Version 2.0 - Optimized for common psychological queries)
