@@ -1,4 +1,4 @@
-# Allow static files to be served directly
+# Static files - serve directly
 /ai.txt    /ai.txt   200
 /llms.txt    /llms.txt   200
 /humans.txt    /humans.txt   200
@@ -7,5 +7,19 @@
 /sitemap.xml    /sitemap.xml   200
 /manifest.json    /manifest.json   200
 
-# Redirect everything else to index.html for SPA routing
+# Assets - serve directly
+/*.js    /:splat    200
+/*.css    /:splat    200
+/*.png    /:splat    200
+/*.jpg    /:splat    200
+/*.jpeg    /:splat    200
+/*.gif    /:splat    200
+/*.svg    /:splat    200
+/*.ico    /:splat    200
+/*.woff    /:splat    200
+/*.woff2    /:splat    200
+/*.ttf    /:splat    200
+/*.eot    /:splat    200
+
+# SPA routing - everything else goes to index.html
 /*    /index.html   200 
