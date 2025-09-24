@@ -275,12 +275,12 @@ function App() {
         <section id="home" className="pt-20 pb-20 md:pb-0">
           <div className="relative h-[700px] sm:h-[600px]">
             <img
-              src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+              src="/photos/bannerbannerbanner.jpg"
               alt="Mirna terapijska soba za psihoterapiju u Srbiji"
               className="w-full h-full object-cover filter blur-sm"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40">
-              <div className="max-w-7xl mx-auto px-4 h-full flex items-center pt-6 sm:pt-0">
+              <div className="max-w-7xl mx-auto px-4 h-full flex items-center pt-6 sm:pt-0i">
                 <div className="grid md:grid-cols-2 gap-12 w-full">
                   {/* Left column */}
                   <article className="text-white">
