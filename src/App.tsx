@@ -470,6 +470,43 @@ function App() {
         </div>
       </section>
 
+      {/* Registry Section */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-serif text-center text-gray-900 mb-8 md:mb-12">
+            {data.registry.title}
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-amber-50 border-l-4 border-amber-500 p-6 md:p-8 rounded-lg mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-800 font-medium">
+                {data.registry.warning}
+              </p>
+            </div>
+            <div className="space-y-4 md:space-y-6">
+              <p className="text-sm md:text-base text-gray-600">
+                {data.registry.description}
+              </p>
+              <p className="text-sm md:text-base text-gray-600">
+                {data.registry.importance}
+              </p>
+              <div className="bg-teal-50 p-6 md:p-8 rounded-lg border-2 border-teal-200">
+                <p className="text-sm md:text-base text-gray-700 mb-4 md:mb-6 font-medium">
+                  {data.registry.checkText}
+                </p>
+                <a
+                  href={data.registry.registryLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300"
+                >
+                  {data.registry.registryLinkText}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What is Gestalt */}
       <section id="gestalt" className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -38,6 +38,19 @@ export const latinicaData = {
       "Smatram da je terapijski odnos osnova isceljenja. Upravo kroz dijalog, svesnost i prisustvo dolazimo do dubljeg razumevanja sebe i sveta oko nas.",
   },
 
+  registry: {
+    title: "Registar psihoterapeuta Srbije",
+    warning:
+      "Važno je da znate da dosta psihoterapeuta u Srbiji radi bez licence. Da bi psihoterapeut imao licencu, mora biti upisan u Registar psihoterapeuta Srbije.",
+    description:
+      "Registar psihoterapeuta Srbije je zvanični registar licenciranih psihoterapeuta u našoj zemlji. Članstvo u ovom registru garantuje da je psihoterapeut završio potrebnu edukaciju, ispunio sve uslove i radi pod supervizijom, što obezbeđuje kvalitet i bezbednost terapijskog procesa.",
+    importance:
+      "Pre nego što se odlučite za psihoterapeuta, preporučujemo vam da proverite da li je on ili ona upisan/a u Registar psihoterapeuta Srbije. Ovo je važan korak kako biste osigurali da radite sa licenciranim stručnjakom koji ispunjava sve standarde struke.",
+    registryLink: "https://savezpsihoterapeuta.org/registar/",
+    registryLinkText: "Proverite Registar psihoterapeuta Srbije",
+    checkText: "Uvek proverite licencu pre zakazivanja seanse",
+  },
+
   gestalt: {
     title: "O Gestalt terapiji",
     description:
